@@ -1,0 +1,29 @@
+###############################################
+#                                             #
+#         Cas 8:                              #
+#            File: cas8.yaml                  #
+#            Description: Etude important     #
+#                                             #
+###############################################
+# En .yaml, pour désactiver un champs, le mettre comme commentaire
+ETUDE_PATHLOSS:
+   PATHLOSS :
+      model : okumura
+      scenario : urban_large
+   ANT_COORD_GEN : g
+   UE_COORD_GEN: a
+   COORD_FILES:  # Utilisé quand les coordonées sont lues à partir d'un fichier.
+      #read: data/coordonnees_case9.txt # actif quand on lis le fichier de coordonnées
+      write: lab0_eq7_coords.txt  # actif quand on veut écrire les résultats dans un fichier
+   DEVICES:
+      Antenna1 : # Group Antenna1 (comme défini dans la base de données)
+         number : 25
+      UE1-App1 : # Group UE1-App1 (comme défini dans la base de données)
+         number : 30
+      UE2-App2 : # Group UE2-App2 (comme défini dans la base de données)
+         number: 20
+   GEOMETRY:
+      Surface:
+         rectangle:
+           length : 5000 # en mètres
+           height : 4000
