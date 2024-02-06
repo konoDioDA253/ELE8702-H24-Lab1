@@ -3,6 +3,8 @@
 ## Vincent Yves Nodjom (Matricule : 1944011)
 ## Équipe : 7
 ## Github link : https://github.com/konoDioDA253/ELE8702-H24-Lab0
+## Question 1 : À quoi sert l'attribut group de la classe ue, et quelle est la différence avec l'attribut app
+## Question 2 : Est-ce correct d'utiliser group=app pour les ues?
 
 import sys
 import math
@@ -190,6 +192,8 @@ def assigner_coordonnees_ues(fichier_de_cas):
         ue = UE(id=len(liste_ues_avec_coordonnees), app_name='UE1-App1')
         if (type_de_generation == 'a') :
             coords = gen_random_coords(fichier_de_cas)
+        # (PROF) Est-ce que group=app est correct pour ue?
+        ue.group = ue.app
         ue.gen = type_de_generation
         ue.coords = coords
         ue.apptype = "app1"
@@ -199,6 +203,8 @@ def assigner_coordonnees_ues(fichier_de_cas):
         ue = UE(id=len(liste_ues_avec_coordonnees), app_name='UE2-App2')
         if (type_de_generation == 'a') :
             coords = gen_random_coords(fichier_de_cas)
+        # (PROF) Est-ce que group=app est correct pour ue?
+        ue.group = ue.app
         ue.gen = type_de_generation
         ue.coords = coords
         ue.apptype = "app2"
@@ -209,19 +215,30 @@ def assigner_coordonnees_ues(fichier_de_cas):
 # fonction initialisant une liste de antennes et assignant des coordonnées selon la grille à chaque antenne
 def assigner_coordonnees_antennes(fichier_de_cas):
     liste_antennes_avec_coordonnees = []
-
-    nombre_antennes = fichier_de_cas['ETUDE_PATHLOSS']['DEVICES']['Antenna1']['number']
-    type_de_generation = fichier_de_cas['ETUDE_PATHLOSS']['ANT_COORD_GEN']
-    
     terrain_shape =  fichier_de_cas['ETUDE_PATHLOSS']['GEOMETRY']['Surface']
-    coords = gen_lattice_coords(terrain_shape, nombre_antennes)
+    id_counter = 0  # Tenir à jour un compteur pour chaque type d'antenne
 
-    for id, coord in enumerate(coords):
-        antenna = Antenna(id)
-        antenna.coords = coord
-        antenna.gen = type_de_generation
-        antenna.group = "Antenna1"
-        liste_antennes_avec_coordonnees.append(antenna)
+    # nombre_antennes = fichier_de_cas['ETUDE_PATHLOSS']['DEVICES']['Antenna1']['number']
+    # type_de_generation = fichier_de_cas['ETUDE_PATHLOSS']['ANT_COORD_GEN']
+    
+    # coords = gen_lattice_coords(terrain_shape, nombre_antennes)
+
+    devices = fichier_de_cas['ETUDE_PATHLOSS']['DEVICES']
+    for antenna_group, antenna_info in devices.items():
+        if antenna_group.startswith('Antenna'):
+            nombre_antennes = antenna_info['number']
+            type_de_generation = fichier_de_cas['ETUDE_PATHLOSS']['ANT_COORD_GEN']
+            
+            coords = gen_lattice_coords(terrain_shape, nombre_antennes)
+            for id, coord in enumerate(coords, start=id_counter):
+                antenna = Antenna(id)
+                antenna.coords = coord
+                antenna.gen = type_de_generation
+                antenna.group = antenna_group
+                liste_antennes_avec_coordonnees.append(antenna)
+
+            # Mettre a jour le compteur pour ce type d'antenne
+            id_counter += nombre_antennes
 
     return liste_antennes_avec_coordonnees
 
@@ -236,23 +253,84 @@ def write_to_file(antennas, ues, fichier_de_cas):
         for ue in ues:
             line = f"ue\t{ue.id}\t{ue.app}\t{ue.coords[0]}\t{ue.coords[1]}\t{ue.apptype}\n"
             file.write(line)
+# Fonction calculant la distance entre deux point sur le terrain
+def calculate_distance(coord1, coord2):
+    x1, y1 = coord1
+    x2, y2 = coord2
+    return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
 
+# Fonction donnant le group a partir du ID d'un objet dans une liste du meme objet
+def get_group_and_coords_by_id(object_list, target_id):
+    for object in object_list:
+        if object.id == target_id:
+            return object.group, object.coords
+    return None  
 
-
-
-
-
-
-
-
-
-    
-# def okumura (argument1, argument2, ...):
-#     #TODO ....
-#     # C'est à vous décider le nombre et type d'arguments utilisés pour
-#     #faire le calcul de pathloss avec le modèle d'Okumura-Hata
-#     # CETTE FONCTION EST OBLIGATOIRE
-#     return pathloss
+def okumura(fichier_de_cas, fichier_de_device, antenna_id, ue_id, antennas, ues):
+    #TODO ....
+    # C'est à vous décider le nombre et type d'arguments utilisés pour
+    #faire le calcul de pathloss avec le modèle d'Okumura-Hata
+    # CETTE FONCTION EST OBLIGATOIRE
+    model = fichier_de_cas['ETUDE_PATHLOSS']['PATHLOSS']['model']
+    scenario = fichier_de_cas['ETUDE_PATHLOSS']['PATHLOSS']['scenario']
+    if model == "okumura" and scenario == "urban_small":
+        # Model okumura scenario urbain petites villes
+        antenna_group, antenna_coords = get_group_and_coords_by_id(antennas, antenna_id)
+        ue_group, ue_coords = get_group_and_coords_by_id(ues, ue_id)
+        fc = fichier_de_device['ANTENNAS'][antenna_group]['frequency']
+        ht = fichier_de_device['ANTENNAS'][antenna_group]['height']
+        hr = fichier_de_device['UES'][ue_group]['height']
+        distance = calculate_distance(antenna_coords, ue_coords)
+        # (PROF) est-ce que les chiffres dans les formules en dB doivent etre converti (exemple avec le 0.8 ici)?
+        A = (1.1*math.log10(fc) - 0.7)*hr - 1.56*math.log10(fc) - 0.8
+        pathloss = 69.55 + 26.16*math.log10(fc) - 13.82*math.log10(ht) - A + (44.9 - 6.55*math.log10(ht))*math.log10(distance)
+        return pathloss
+    if model == "okumura" and scenario == "urban_large":
+        # Model okumura scenario urbain grande villes
+        antenna_group, antenna_coords = get_group_and_coords_by_id(antennas, antenna_id)
+        ue_group, ue_coords = get_group_and_coords_by_id(ues, ue_id)
+        fc = fichier_de_device['ANTENNAS'][antenna_group]['frequency']
+        ht = fichier_de_device['ANTENNAS'][antenna_group]['height']
+        hr = fichier_de_device['UES'][ue_group]['height']
+        distance = calculate_distance(antenna_coords, ue_coords)
+        # A = 
+        if fc < 0.3 :
+            # (PROF) Est-ce que le log est base 10 pour okumura?
+            # (PROF) est-ce que les chiffres dans les formules en dB doivent etre converti (exemple avec le 1.1 ici)?
+            A = 8.29*(math.log10(1.54*hr))**2 - 1.1
+        elif fc >= 0.3 :
+            A = 3.2*(math.log10(11.75*hr))**2 - 4.97
+        pathloss = 69.55 + 26.16*math.log10(fc) - 13.82*math.log10(ht) - A + (44.9 - 6.55*math.log10(ht))*math.log10(distance)
+        return pathloss
+    if model == "okumura" and scenario == "suburban":
+        # Model okumura scenario suburbain
+        antenna_group, antenna_coords = get_group_and_coords_by_id(antennas, antenna_id)
+        ue_group, ue_coords = get_group_and_coords_by_id(ues, ue_id)
+        fc = fichier_de_device['ANTENNAS'][antenna_group]['frequency']
+        ht = fichier_de_device['ANTENNAS'][antenna_group]['height']
+        hr = fichier_de_device['UES'][ue_group]['height']
+        distance = calculate_distance(antenna_coords, ue_coords)
+        # (PROF) est-ce que les chiffres dans les formules en dB doivent etre converti (exemple avec le 0.8 ici)?
+        A = (1.1*math.log10(fc) - 0.7)*hr - 1.56*math.log10(fc) - 0.8
+        pathloss_urban_small = 69.55 + 26.16*math.log10(fc) - 13.82*math.log10(ht) - A + (44.9 - 6.55*math.log10(ht))*math.log10(distance)
+        pathloss = pathloss_urban_small - 2*(math.log10(fc/28))**2 - 5.4
+        return pathloss
+    if model == "okumura" and scenario == "open":
+        # Model okumura scenario ouvert
+        antenna_group, antenna_coords = get_group_and_coords_by_id(antennas, antenna_id)
+        ue_group, ue_coords = get_group_and_coords_by_id(ues, ue_id)
+        fc = fichier_de_device['ANTENNAS'][antenna_group]['frequency']
+        ht = fichier_de_device['ANTENNAS'][antenna_group]['height']
+        hr = fichier_de_device['UES'][ue_group]['height']
+        distance = calculate_distance(antenna_coords, ue_coords)
+        # (PROF) est-ce que les chiffres dans les formules en dB doivent etre converti (exemple avec le 0.8 ici)?
+        A = (1.1*math.log10(fc) - 0.7)*hr - 1.56*math.log10(fc) - 0.8
+        pathloss_urban_small = 69.55 + 26.16*math.log10(fc) - 13.82*math.log10(ht) - A + (44.9 - 6.55*math.log10(ht))*math.log10(distance)
+        pathloss = pathloss_urban_small - 4.78*(math.log10(fc))**2 -18.733*math.log10(fc) -40.98
+        return pathloss    
+    # Si aucun cas n'est selectionnee :
+    # (PROF) Que doit-on retourner si aucun cas de pathloss n'est trouve?
+    return 0
 
 def lab1 (data_case):
     #TODO ....
@@ -285,9 +363,15 @@ def lab1 (data_case):
 def main(arg):
     # case_file_name = treat_cli_args(arg)
     case_file_name = "lab1_eq7_cas.yaml"
+    device_file_name = "device_db.yaml"
     data_case = read_yaml_file(case_file_name)
+    data_device = read_yaml_file(device_file_name)
     fichier_de_cas = data_case
+    fichier_de_device = data_device
     antennas, ues = lab1(fichier_de_cas)
+
+    okumura(fichier_de_cas,fichier_de_device,2,3,antennas,ues)
+
     write_to_file(antennas,ues,fichier_de_cas)
     #
     #TODO les instructions de main qui vont faire appel aux autres fonctions du programme
