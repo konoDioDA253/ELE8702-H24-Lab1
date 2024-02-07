@@ -275,6 +275,23 @@ def write_pathloss_to_file(pathlosses, fichier_de_cas):
             line = f"{pathloss.id_ue}\t{pathloss.id_ant}\t{pathloss.value}\t{fichier_de_cas['ETUDE_PATHLOSS']['PATHLOSS']['model']}\t{fichier_de_cas['ETUDE_PATHLOSS']['PATHLOSS']['scenario']}\n"
             file.write(line)
 
+## Fonction qui ecrire dans un fichier l'id de l'antenne et tous les id des eus associer
+def write_assoc_ues_to_file(antennas, fichier_de_cas):
+    with open(assoc_antennas_file_name, 'w') as file:
+        for antenna in antennas:
+            line = f"{antenna.id}"
+            for ue in antenna.assoc_ues :
+                line += f"\t{ue}"
+            line += "\n"
+            file.write(line)
+
+# Fonction qui ecrit dans un fichier l'id de l'ue avec l'antenne associee
+def write_assoc_ant_to_file(ues, fichier_de_cas):
+    with open(assoc_ues_file_name, 'w') as file:
+        for ue in ues:
+            line = f"{ue.id}\t{ue.assoc_ant}\n"
+            file.write(line)
+
 # Fonction calculant la distance entre deux point sur le terrain
 def calculate_distance(coord1, coord2):
     x1, y1 = coord1
@@ -477,7 +494,7 @@ def treat_cli_args(arg):
     # À noter que dans cette fonction il faut ajouter les vérifications qui s'imposent
     # par exemple, nombre d'arguments appropriés, existance du fichier de cas, etc.
     
-    case_file_name = "lab1_eq7_cas.yaml"#arg[0]
+    case_file_name = arg[0]
     print("Le nom du fichier de cas est : ",case_file_name)
     # Check if the file exists
     YAML_file_exists = True
@@ -522,7 +539,7 @@ def main(arg):
         return
 
     # Debut du programme :
-    case_file_name = "lab1_eq7_cas.yaml"
+    # case_file_name = "lab1_eq7_cas.yaml"
     device_file_name = "device_db.yaml"
     data_case = read_yaml_file(case_file_name)
     data_device = read_yaml_file(device_file_name)
@@ -535,6 +552,8 @@ def main(arg):
 
     write_to_file(antennas,ues,fichier_de_cas)
     write_pathloss_to_file(pathlosses, fichier_de_cas)
+    write_assoc_ues_to_file(antennas, fichier_de_cas)
+    write_assoc_ant_to_file(ues, fichier_de_cas)
 
     #
     #TODO les instructions de main qui vont faire appel aux autres fonctions du programme
