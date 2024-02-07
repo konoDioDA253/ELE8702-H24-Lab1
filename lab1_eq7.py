@@ -3,11 +3,13 @@
 ## Vincent Yves Nodjom (Matricule : 1944011)
 ## Équipe : 7
 ## Github link : https://github.com/konoDioDA253/ELE8702-H24-Lab1
-## Question 1 : À quoi sert l'attribut group de la classe ue, et quelle est la différence avec l'attribut app
-## Question 2 : Est-ce correct d'utiliser group=app pour les ues?
-## Question 3 : à quoi sert la fonction d'erreur?
-## Question 4 : Notre  fichier de cas eat-il sensé supporter plus d'un model à la foi?
-## Question 5 : Est-ce qu'on peut comparer avec la prof les valeurs du pathlosses?
+## Question 1BS : À quoi sert l'attribut group de la classe ue, et quelle est la différence avec l'attribut app
+## Question 2BS : Est-ce correct d'utiliser group=app pour les ues?
+## Question 3 : à quoi sert la fonction d'erreur? Il faut utiliser pour chaque warning
+## Question 4*BS : Notre  fichier de cas eat-il sensé supporter plus d'un model à la foi?
+## Question 5*BS : Est-ce qu'on peut comparer avec la prof les valeurs du pathlosses?
+## Question 6 : Verifier les aligenement dans le fichier d'affichage  est-ce qu'il faut des espaces ou pas BS?
+## Question 7 : toujours verivier la distance car on peut ne pas utiliser une liste de coordonnées au lieu de la fonction randon
 import sys
 import math
 import yaml
@@ -19,7 +21,7 @@ import argparse
 # Numero propres a l'équipe
 numero_equipe = '7'
 numero_lab = '1'
-# (PROF) Est-ce que c'est du Hard-wired? Comment le faire a travers le fichier de cas? 
+# (PROF) Est-ce que c'est du Hard-wired? Comment le faire a travers le fichier de cas? BS
 coord_file_name = "lab"+numero_lab+"_eq"+numero_equipe+"_coords.txt"
 pathloss_file_name = "lab"+numero_lab+"_eq"+numero_equipe+"_pl.txt"
 assoc_ues_file_name = "lab"+numero_lab+"_eq"+numero_equipe+"_assoc_ue.txt"
@@ -57,7 +59,7 @@ class UE:
         # Attribut rajoutee par notre equipe
         self.apptype = None # Pas besoin car tirer de la chaine de caractere de group
 
-# (PROF) : est-ce qu'on a le droit de rajouter une classe?
+# (PROF) : est-ce qu'on a le droit de rajouter une classe? oui
 class Pathloss:
      def __init__(self, id_ue, id_ant):
         self.id_ue = id_ue   # ID de l'ue
@@ -66,6 +68,7 @@ class Pathloss:
 
 
 # (PROF) : À quoi doit servir la fonction d'erreur?
+# FAIRE EN SORTE DE METTRE UN NOM DE FICHIER PAR DEFAUT POUR CLI YAML
 def ERROR(msg , code = 1):
     print("\n\n\nERROR\nPROGRAM STOPPED!!!\n")
     if msg:
@@ -197,15 +200,17 @@ def gen_random_coords(fichier_de_cas):
     return coordonnees_aleatoires
 
 # Fonction initialisant une liste de ues et assignant des coordonnées aléatoirement à chaque ue dans la liste
+
 def assigner_coordonnees_ues(fichier_de_cas):
     liste_ues_avec_coordonnees = []
 
-    # (PROF) : est-ce que ETUDE_PATHLOSS est considéré hard-wiring?
+    # (PROF) : est-ce que ETUDE_PATHLOSS est considéré hard-wiring? BS
     nombre_ues_ue1 = fichier_de_cas['ETUDE_PATHLOSS']['DEVICES']['UE1-App1']['number']
     nombre_ues_ue2 = fichier_de_cas['ETUDE_PATHLOSS']['DEVICES']['UE2-App2']['number']
     type_de_generation = fichier_de_cas['ETUDE_PATHLOSS']['UE_COORD_GEN']
 
     # (PROF) : Doit-on pouvoir supporter plus que 2 types d'UE dans le fichier de cas?
+    # VERIFIER AVEC BS mais a priori good
     for i in range(nombre_ues_ue1):
         ue = UE(id=len(liste_ues_avec_coordonnees), app_name='UE1-App1')
         if (type_de_generation == 'a') :
@@ -257,7 +262,7 @@ def assigner_coordonnees_antennes(fichier_de_cas):
 
 # Fonction qui ecrit les information par rapport aux coordonnees des antennes et au UEs
 def write_to_file(antennas, ues, fichier_de_cas):
-
+# (PROF) : Est-ce que mettre un tab et un retour a la ligne a la fin convient, ou il faut absolument des espace?
     with open(fichier_de_cas['ETUDE_PATHLOSS']['COORD_FILES']['write'], 'w') as file:
         for antenna in antennas:
             line = f"antenna\t{antenna.id}\t{antenna.group}\t{antenna.coords[0]}\t{antenna.coords[1]}\n"
