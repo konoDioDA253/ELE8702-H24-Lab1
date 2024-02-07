@@ -57,6 +57,7 @@ class UE:
         # Attribut rajoutee par notre equipe
         self.apptype = None # Pas besoin car tirer de la chaine de caractere de group
 
+# (PROF) : est-ce qu'on a le droit de rajouter une classe?
 class Pathloss:
      def __init__(self, id_ue, id_ant):
         self.id_ue = id_ue   # ID de l'ue
@@ -64,7 +65,7 @@ class Pathloss:
         self.value = None   # Valeur du pathloss
 
 
-
+# (PROF) : À quoi doit servir la fonction d'erreur?
 def ERROR(msg , code = 1):
     print("\n\n\nERROR\nPROGRAM STOPPED!!!\n")
     if msg:
@@ -195,14 +196,16 @@ def gen_random_coords(fichier_de_cas):
     coordonnees_aleatoires = [x_aleatoire, y_aleatoire]
     return coordonnees_aleatoires
 
-# fonction initialisant une liste de ues et assignant des coordonnées aléatoirement à chaque ue dans la liste
+# Fonction initialisant une liste de ues et assignant des coordonnées aléatoirement à chaque ue dans la liste
 def assigner_coordonnees_ues(fichier_de_cas):
     liste_ues_avec_coordonnees = []
 
+    # (PROF) : est-ce que ETUDE_PATHLOSS est considéré hard-wiring?
     nombre_ues_ue1 = fichier_de_cas['ETUDE_PATHLOSS']['DEVICES']['UE1-App1']['number']
     nombre_ues_ue2 = fichier_de_cas['ETUDE_PATHLOSS']['DEVICES']['UE2-App2']['number']
     type_de_generation = fichier_de_cas['ETUDE_PATHLOSS']['UE_COORD_GEN']
 
+    # (PROF) : Doit-on pouvoir supporter plus que 2 types d'UE dans le fichier de cas?
     for i in range(nombre_ues_ue1):
         ue = UE(id=len(liste_ues_avec_coordonnees), app_name='UE1-App1')
         if (type_de_generation == 'a') :
@@ -233,11 +236,6 @@ def assigner_coordonnees_antennes(fichier_de_cas):
     terrain_shape =  fichier_de_cas['ETUDE_PATHLOSS']['GEOMETRY']['Surface']
     id_counter = 0  # Tenir à jour un compteur pour chaque type d'antenne
 
-    # nombre_antennes = fichier_de_cas['ETUDE_PATHLOSS']['DEVICES']['Antenna1']['number']
-    # type_de_generation = fichier_de_cas['ETUDE_PATHLOSS']['ANT_COORD_GEN']
-    
-    # coords = gen_lattice_coords(terrain_shape, nombre_antennes)
-
     devices = fichier_de_cas['ETUDE_PATHLOSS']['DEVICES']
     for antenna_group, antenna_info in devices.items():
         if antenna_group.startswith('Antenna'):
@@ -257,7 +255,7 @@ def assigner_coordonnees_antennes(fichier_de_cas):
 
     return liste_antennes_avec_coordonnees
 
-# fonction qui ecrit les information par rapport aux antennes et au UEs
+# Fonction qui ecrit les information par rapport aux coordonnees des antennes et au UEs
 def write_to_file(antennas, ues, fichier_de_cas):
 
     with open(fichier_de_cas['ETUDE_PATHLOSS']['COORD_FILES']['write'], 'w') as file:
@@ -268,14 +266,15 @@ def write_to_file(antennas, ues, fichier_de_cas):
         for ue in ues:
             line = f"ue\t{ue.id}\t{ue.app}\t{ue.coords[0]}\t{ue.coords[1]}\t{ue.apptype}\n"
             file.write(line)
-# Fonction qui écrire les un fichier la valeurs des pathlosses calculer l'id de l'ue et des antennes associés le senario utilisé et le model
+
+# Fonction qui écrire dans un fichier la valeurs des pathlosses calculer, l'id de l'ue et des antennes associés et le senario utilisé et le model
 def write_pathloss_to_file(pathlosses, fichier_de_cas):
     with open(pathloss_file_name, 'w') as file:
         for pathloss in pathlosses:
             line = f"{pathloss.id_ue}\t{pathloss.id_ant}\t{pathloss.value}\t{fichier_de_cas['ETUDE_PATHLOSS']['PATHLOSS']['model']}\t{fichier_de_cas['ETUDE_PATHLOSS']['PATHLOSS']['scenario']}\n"
             file.write(line)
 
-## Fonction qui ecrire dans un fichier l'id de l'antenne et tous les id des eus associer
+# Fonction qui ecrit dans un fichier l'id de l'antenne et tous les id des ues associees
 def write_assoc_ues_to_file(antennas, fichier_de_cas):
     with open(assoc_antennas_file_name, 'w') as file:
         for antenna in antennas:
@@ -298,13 +297,14 @@ def calculate_distance(coord1, coord2):
     x2, y2 = coord2
     return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
 
-# Fonction donnant le group a partir du ID d'un objet dans une liste du meme objet
+# Fonction donnant le group et les coords a partir du ID d'un objet dans une liste du meme objet
 def get_group_and_coords_by_id(object_list, target_id):
     for object in object_list:
         if object.id == target_id:
             return object.group, object.coords
     return None  
 
+# Fonction permettant de calculer le pathloss entre une antenne et une UE
 def okumura(fichier_de_cas, fichier_de_device, antenna_id, ue_id, antennas, ues):
     #TODO ....
     # C'est à vous décider le nombre et type d'arguments utilisés pour
@@ -371,6 +371,7 @@ def okumura(fichier_de_cas, fichier_de_device, antenna_id, ue_id, antennas, ues)
     # (PROF) Que doit-on retourner si aucun cas de pathloss n'est trouve?
     return 0
 
+# Fonction permettant d'assigner un pathloss à chaque combinaison (antenne,UE) du terrain
 def pathloss_attribution(fichier_de_cas, fichier_de_device, antennas, ues):
     pathloss_list =[]
     for ue in ues:
@@ -380,8 +381,9 @@ def pathloss_attribution(fichier_de_cas, fichier_de_device, antennas, ues):
             pathloss_list.append(pathloss)
     return pathloss_list
 
+# Fonction permettant d'associer les UEs du terrain a leur antenne ayant le pathloss minimal
 def association_ue_antenne(pathlosses, antennas, ues):
-    # Initialize a dictionary to store the antenna with the smallest pathloss for each UE
+    # Initialiser un dictionnaire pour stocker l'antenne avec le pathloss le plus petit pour chaque UE
     ue_to_antenna = {}
 
     for pathloss_object in pathlosses:
@@ -389,25 +391,25 @@ def association_ue_antenne(pathlosses, antennas, ues):
         ant_id = pathloss_object.id_ant
         pathloss_value = pathloss_object.value
 
-        # If the UE ID is not in the dictionary or the pathloss value is smaller than the current minimum,
-        # update the dictionary entry
+        # Si l'UE n'est pas dans le dictionnaire ou que la valeur du pathloss est plus petite que le minimum courant,
+        # Mettre a jour l'entree du dictionnaire
         if ue_id not in ue_to_antenna or pathloss_value < ue_to_antenna[ue_id][1]:
             ue_to_antenna[ue_id] = (ant_id, pathloss_value)
 
-    # Update the assoc_ant attribute for corresponding UEs
+    # Mettre a jour l'attribut assoc_ant de l'UE correspondante
     for ue_id, (ant_id, _) in ue_to_antenna.items():
         ue = next((ue for ue in ues if ue.id == ue_id), None)
         if ue:
             ue.assoc_ant = ant_id
 
-    # Update the assoc_ues attribute for corresponding antennas
+    # Mettre a jour l'attribut assoc_ue de l'antenne correspondante
     for ant in antennas:
         associated_ues = [ue.id for ue in ues if ue.assoc_ant == ant.id]
         ant.assoc_ues = associated_ues
 
     return antennas, ues
 
-
+# Fonction lab1 requise, retourne une liste d'antenne et une liste d'UE
 def lab1 (data_case):
     #TODO ....
     # antennas est une liste qui contient les objets de type Antenna
@@ -483,7 +485,7 @@ def validate_structure(content, expected_structure):
 
     return True
 
-
+# Fonction permettant de traiter les arguments en entree de la commande CLI python pour lancer le code source
 def treat_cli_args(arg):
     # arg est une liste qui contient les arguments utilisés lors de l'appel du programme par CLI. 
     # Cette fonction doit retourner le nom du fichier de cas à partir de l'interface de commande (CLI)
@@ -517,7 +519,7 @@ def treat_cli_args(arg):
         YAML_file_exists = False
     return YAML_file_exists, YAML_file_correct_extension, correct_yaml_structure, case_file_name
 
-
+# Fonction main du programme (requise), elle appelle les autres fonctions du programme
 def main(arg):
     # Verification de la validitee du fichier yaml fourni par la commande CLI
     yaml_exist, yaml_correct_extenstion, correct_yaml_structure, case_file_name = treat_cli_args(arg)
@@ -555,9 +557,7 @@ def main(arg):
     write_assoc_ues_to_file(antennas, fichier_de_cas)
     write_assoc_ant_to_file(ues, fichier_de_cas)
 
-    #
-    #TODO les instructions de main qui vont faire appel aux autres fonctions du programme
-    #.....
+
 
 if __name__ == '__main__':
     # sys.argv est une liste qui contient les arguments utilisés lors de l'appel 
