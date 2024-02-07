@@ -4,12 +4,12 @@
 ## Équipe : 7
 ## Github link : https://github.com/konoDioDA253/ELE8702-H24-Lab1
 ## Question 1BS : À quoi sert l'attribut group de la classe ue, et quelle est la différence avec l'attribut app
-## Question 2BS : Est-ce correct d'utiliser group=app pour les ues?
+## Question 2BS : Est-ce correct d'utiliser group=app pour les ues? NON group=name de device_db et app=app de device_db
 ## Question 3 : à quoi sert la fonction d'erreur? Il faut utiliser pour chaque warning
-## Question 4*BS : Notre  fichier de cas eat-il sensé supporter plus d'un model à la foi?
-## Question 5*BS : Est-ce qu'on peut comparer avec la prof les valeurs du pathlosses?
+## Question 4*BS : Notre  fichier de cas eat-il sensé supporter plus d'un model à la foi? NON
+## Question 5*BS : Est-ce qu'on peut comparer avec la prof les valeurs du pathlosses? ENVOYER UN SAMPLE PAR EMAIL à LA PROF
 ## Question 6 : Verifier les aligenement dans le fichier d'affichage  est-ce qu'il faut des espaces ou pas BS?
-## Question 7 : toujours verivier la distance car on peut ne pas utiliser une liste de coordonnées au lieu de la fonction randon
+## Question 7 : toujours verifier la distance car on peut ne pas utiliser une liste de coordonnées au lieu de la fonction randon
 import sys
 import math
 import yaml
@@ -21,7 +21,8 @@ import argparse
 # Numero propres a l'équipe
 numero_equipe = '7'
 numero_lab = '1'
-# (PROF) Est-ce que c'est du Hard-wired? Comment le faire a travers le fichier de cas? BS
+# (PROF) Est-ce que c'est du Hard-wired? Comment le faire a travers le fichier de cas? BS****
+# ENVOYER AU PROF CETTTE QUESTION
 coord_file_name = "lab"+numero_lab+"_eq"+numero_equipe+"_coords.txt"
 pathloss_file_name = "lab"+numero_lab+"_eq"+numero_equipe+"_pl.txt"
 assoc_ues_file_name = "lab"+numero_lab+"_eq"+numero_equipe+"_assoc_ue.txt"
@@ -59,7 +60,7 @@ class UE:
         # Attribut rajoutee par notre equipe
         self.apptype = None # Pas besoin car tirer de la chaine de caractere de group
 
-# (PROF) : est-ce qu'on a le droit de rajouter une classe? oui
+# (PROF) : est-ce qu'on a le droit de rajouter une classe? oui ****
 class Pathloss:
      def __init__(self, id_ue, id_ant):
         self.id_ue = id_ue   # ID de l'ue
@@ -69,6 +70,7 @@ class Pathloss:
 
 # (PROF) : À quoi doit servir la fonction d'erreur?
 # FAIRE EN SORTE DE METTRE UN NOM DE FICHIER PAR DEFAUT POUR CLI YAML
+# S'ASSURER QUE LES STRING DANS LES YAML FONT DU SENS
 def ERROR(msg , code = 1):
     print("\n\n\nERROR\nPROGRAM STOPPED!!!\n")
     if msg:
@@ -200,22 +202,23 @@ def gen_random_coords(fichier_de_cas):
     return coordonnees_aleatoires
 
 # Fonction initialisant une liste de ues et assignant des coordonnées aléatoirement à chaque ue dans la liste
-
 def assigner_coordonnees_ues(fichier_de_cas):
     liste_ues_avec_coordonnees = []
 
     # (PROF) : est-ce que ETUDE_PATHLOSS est considéré hard-wiring? BS
+    # OUI C'EST DU HARD_WIRING, UTILISER get_from_dict
     nombre_ues_ue1 = fichier_de_cas['ETUDE_PATHLOSS']['DEVICES']['UE1-App1']['number']
     nombre_ues_ue2 = fichier_de_cas['ETUDE_PATHLOSS']['DEVICES']['UE2-App2']['number']
     type_de_generation = fichier_de_cas['ETUDE_PATHLOSS']['UE_COORD_GEN']
 
     # (PROF) : Doit-on pouvoir supporter plus que 2 types d'UE dans le fichier de cas?
-    # VERIFIER AVEC BS mais a priori good
+    # OUI UTILISER LA MEME CHOSE QUE ANTENNE
     for i in range(nombre_ues_ue1):
         ue = UE(id=len(liste_ues_avec_coordonnees), app_name='UE1-App1')
         if (type_de_generation == 'a') :
             coords = gen_random_coords(fichier_de_cas)
         # (PROF) Est-ce que group=app est correct pour ue?
+        # NON UTILISER DEVICE_DB.YAML POUR GET LE appname ET LE group
         ue.group = ue.app
         ue.gen = type_de_generation
         ue.coords = coords
@@ -227,6 +230,7 @@ def assigner_coordonnees_ues(fichier_de_cas):
         if (type_de_generation == 'a') :
             coords = gen_random_coords(fichier_de_cas)
         # (PROF) Est-ce que group=app est correct pour ue?
+        # NON UTILISER DEVICE_DB.YAML POUR GET LE appname ET LE group
         ue.group = ue.app
         ue.gen = type_de_generation
         ue.coords = coords
@@ -262,7 +266,7 @@ def assigner_coordonnees_antennes(fichier_de_cas):
 
 # Fonction qui ecrit les information par rapport aux coordonnees des antennes et au UEs
 def write_to_file(antennas, ues, fichier_de_cas):
-# (PROF) : Est-ce que mettre un tab et un retour a la ligne a la fin convient, ou il faut absolument des espace?
+# (PROF) : Est-ce que mettre un tab et un retour a la ligne a la fin convient, ou il faut absolument des espace? NON C'EST CORRECT
     with open(fichier_de_cas['ETUDE_PATHLOSS']['COORD_FILES']['write'], 'w') as file:
         for antenna in antennas:
             line = f"antenna\t{antenna.id}\t{antenna.group}\t{antenna.coords[0]}\t{antenna.coords[1]}\n"
@@ -297,6 +301,7 @@ def write_assoc_ant_to_file(ues, fichier_de_cas):
             file.write(line)
 
 # Fonction calculant la distance entre deux point sur le terrain
+# S'ASSURER DE LA PRESENCE DANS LE TERRAIN DES DEUX COORDONNEES
 def calculate_distance(coord1, coord2):
     x1, y1 = coord1
     x2, y2 = coord2
@@ -310,6 +315,7 @@ def get_group_and_coords_by_id(object_list, target_id):
     return None  
 
 # Fonction permettant de calculer le pathloss entre une antenne et une UE
+# WARNING : VERIFIER TOUTES LES CONDITIONS DE LA FORMULE (i.e. km au lieu de metre dans le fichier de cas etc...)
 def okumura(fichier_de_cas, fichier_de_device, antenna_id, ue_id, antennas, ues):
     #TODO ....
     # C'est à vous décider le nombre et type d'arguments utilisés pour
@@ -373,9 +379,11 @@ def okumura(fichier_de_cas, fichier_de_device, antenna_id, ue_id, antennas, ues)
         pathloss = pathloss_urban_small - 4.78*(math.log10(fc))**2 -18.733*math.log10(fc) -40.98
         return pathloss    
     # Si aucun cas n'est selectionnee :
-    # (PROF) Que doit-on retourner si aucun cas de pathloss n'est trouve?
+    # FAIRE UN MESSAGE D'ERREUR CORRESPONDANT, GERER LA SITUATION
+    # (PROF) Que doit-on retourner si aucun cas de pathloss n'est trouve? retourner message
     return 0
 
+# **** ENVOYER EMAIL
 # Fonction permettant d'assigner un pathloss à chaque combinaison (antenne,UE) du terrain
 def pathloss_attribution(fichier_de_cas, fichier_de_device, antennas, ues):
     pathloss_list =[]
@@ -501,7 +509,8 @@ def treat_cli_args(arg):
     # À noter que dans cette fonction il faut ajouter les vérifications qui s'imposent
     # par exemple, nombre d'arguments appropriés, existance du fichier de cas, etc.
     
-    case_file_name = arg[0]
+    case_file_name = "lab1_eq7_cas.yaml"
+    # case_file_name = arg[0]
     print("Le nom du fichier de cas est : ",case_file_name)
     # Check if the file exists
     YAML_file_exists = True
@@ -546,7 +555,6 @@ def main(arg):
         return
 
     # Debut du programme :
-    # case_file_name = "lab1_eq7_cas.yaml"
     device_file_name = "device_db.yaml"
     data_case = read_yaml_file(case_file_name)
     data_device = read_yaml_file(device_file_name)

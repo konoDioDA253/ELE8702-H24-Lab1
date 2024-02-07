@@ -14,7 +14,7 @@ ETUDE_PATHLOSS:
    UE_COORD_GEN: a
    COORD_FILES:  # Utilisé quand les coordonées sont lues à partir d'un fichier.
       #read: data/coordonnees_case9.txt # actif quand on lis le fichier de coordonnées
-      write:   .txt  # actif quand on veut écrire les résultats dans un fichier
+      write: lab1_eq7_coords.txt  # actif quand on veut écrire les résultats dans un fichier
    DEVICES:
       Antenna1 : # Group Antenna1 (comme défini dans la base de données)
          number : 25
@@ -29,5 +29,5 @@ ETUDE_PATHLOSS:
    GEOMETRY:
       Surface:
          rectangle:
-           length : 5000 # en mètres
+           length : 5000 # en kilomètres
            height : 4000
