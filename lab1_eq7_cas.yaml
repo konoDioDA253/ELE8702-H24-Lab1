@@ -18,10 +18,10 @@ ETUDE_PATHLOSS:
    DEVICES:
       Antenna1 : # Group Antenna1 (comme défini dans la base de données)
          number : 25
-      Antenna2 : # Group Antenna1 (comme défini dans la base de données)
-         number : 20
-      Antenna5 : # Group Antenna1 (comme défini dans la base de données)
-         number : 10
+      # Antenna2 : # Group Antenna1 (comme défini dans la base de données)
+      #    number : 20
+      # Antenna5 : # Group Antenna1 (comme défini dans la base de données)
+      #    number : 10
       UE1-App1 : # Group UE1-App1 (comme défini dans la base de données)
          number : 30
       UE2-App2 : # Group UE2-App2 (comme défini dans la base de données)

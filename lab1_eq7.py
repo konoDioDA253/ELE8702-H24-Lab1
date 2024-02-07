@@ -2,7 +2,7 @@
 ## Bouh Abdillahi (Matricule : 1940646)
 ## Vincent Yves Nodjom (Matricule : 1944011)
 ## Équipe : 7
-## Github link : https://github.com/konoDioDA253/ELE8702-H24-Lab0
+## Github link : https://github.com/konoDioDA253/ELE8702-H24-Lab1
 ## Question 1 : À quoi sert l'attribut group de la classe ue, et quelle est la différence avec l'attribut app
 ## Question 2 : Est-ce correct d'utiliser group=app pour les ues?
 
@@ -49,6 +49,14 @@ class UE:
         self.gen = None       # type de géneration de coordonnées: 'g', 'a', etc. (str)
         # Attribut rajoutee par notre equipe
         self.apptype = None # Pas besoin car tirer de la chaine de caractere de group
+
+class Pathloss:
+     def __init__(self, id_ue, id_ant):
+        self.id_ue = id_ue   # ID de l'ue
+        self.id_ant = id_ant # ID de l'antenne
+        self.value = None   # Valeur du pathloss
+
+
 
 def ERROR(msg , code = 1):
     print("\n\n\nERROR\nPROGRAM STOPPED!!!\n")
@@ -332,6 +340,43 @@ def okumura(fichier_de_cas, fichier_de_device, antenna_id, ue_id, antennas, ues)
     # (PROF) Que doit-on retourner si aucun cas de pathloss n'est trouve?
     return 0
 
+def pathloss_attribution(fichier_de_cas, fichier_de_device, antennas, ues):
+    pathloss_list =[]
+    for ue in ues:
+        for antenna in antennas:
+            pathloss = Pathloss(ue.id, antenna.id)
+            pathloss.value = okumura(fichier_de_cas, fichier_de_device, antenna.id, ue.id, antennas, ues)
+            pathloss_list.append(pathloss)
+    return pathloss_list
+
+def association_ue_antenne(pathlosses, antennas, ues):
+    # Initialize a dictionary to store the antenna with the smallest pathloss for each UE
+    ue_to_antenna = {}
+
+    for pathloss_object in pathlosses:
+        ue_id = pathloss_object.id_ue
+        ant_id = pathloss_object.id_ant
+        pathloss_value = pathloss_object.value
+
+        # If the UE ID is not in the dictionary or the pathloss value is smaller than the current minimum,
+        # update the dictionary entry
+        if ue_id not in ue_to_antenna or pathloss_value < ue_to_antenna[ue_id][1]:
+            ue_to_antenna[ue_id] = (ant_id, pathloss_value)
+
+    # Update the assoc_ant attribute for corresponding UEs
+    for ue_id, (ant_id, _) in ue_to_antenna.items():
+        ue = next((ue for ue in ues if ue.id == ue_id), None)
+        if ue:
+            ue.assoc_ant = ant_id
+
+    # Update the assoc_ues attribute for corresponding antennas
+    for ant in antennas:
+        associated_ues = [ue.id for ue in ues if ue.assoc_ant == ant.id]
+        ant.assoc_ues = associated_ues
+
+    return antennas, ues
+
+
 def lab1 (data_case):
     #TODO ....
     # antennas est une liste qui contient les objets de type Antenna
@@ -370,7 +415,8 @@ def main(arg):
     fichier_de_device = data_device
     antennas, ues = lab1(fichier_de_cas)
 
-    okumura(fichier_de_cas,fichier_de_device,2,3,antennas,ues)
+    pathlosses = pathloss_attribution(fichier_de_cas,fichier_de_device,antennas,ues)
+    antennas, ues = association_ue_antenne(pathlosses, antennas, ues)
 
     write_to_file(antennas,ues,fichier_de_cas)
     #
