@@ -5,7 +5,9 @@
 ## Github link : https://github.com/konoDioDA253/ELE8702-H24-Lab1
 ## Question 1 : À quoi sert l'attribut group de la classe ue, et quelle est la différence avec l'attribut app
 ## Question 2 : Est-ce correct d'utiliser group=app pour les ues?
-
+## Question 3 : à quoi sert la fonction d'erreur?
+## Question 4 : Notre  fichier de cas eat-il sensé supporter plus d'un model à la foi?
+## Question 5 : Est-ce qu'on peut comparer avec la prof les valeurs du pathlosses?
 import sys
 import math
 import yaml
@@ -16,7 +18,7 @@ import argparse
 # Variables GLOBAL
 # Numero propres a l'équipe
 numero_equipe = '7'
-numero_lab = '0'
+numero_lab = '1'
 # (PROF) Est-ce que c'est du Hard-wired? Comment le faire a travers le fichier de cas? 
 coord_file_name = "lab"+numero_lab+"_eq"+numero_equipe+"_coords.txt"
 pathloss_file_name = "lab"+numero_lab+"_eq"+numero_equipe+"_pl.txt"
@@ -266,6 +268,13 @@ def write_to_file(antennas, ues, fichier_de_cas):
         for ue in ues:
             line = f"ue\t{ue.id}\t{ue.app}\t{ue.coords[0]}\t{ue.coords[1]}\t{ue.apptype}\n"
             file.write(line)
+# Fonction qui écrire les un fichier la valeurs des pathlosses calculer l'id de l'ue et des antennes associés le senario utilisé et le model
+def write_pathloss_to_file(pathlosses, fichier_de_cas):
+    with open(pathloss_file_name, 'w') as file:
+        for pathloss in pathlosses:
+            line = f"{pathloss.id_ue}\t{pathloss.id_ant}\t{pathloss.value}\t{fichier_de_cas['ETUDE_PATHLOSS']['PATHLOSS']['model']}\t{fichier_de_cas['ETUDE_PATHLOSS']['PATHLOSS']['scenario']}\n"
+            file.write(line)
+
 # Fonction calculant la distance entre deux point sur le terrain
 def calculate_distance(coord1, coord2):
     x1, y1 = coord1
@@ -468,7 +477,7 @@ def treat_cli_args(arg):
     # À noter que dans cette fonction il faut ajouter les vérifications qui s'imposent
     # par exemple, nombre d'arguments appropriés, existance du fichier de cas, etc.
     
-    case_file_name = arg[0]
+    case_file_name = "lab1_eq7_cas.yaml"#arg[0]
     print("Le nom du fichier de cas est : ",case_file_name)
     # Check if the file exists
     YAML_file_exists = True
@@ -525,6 +534,8 @@ def main(arg):
     antennas, ues = association_ue_antenne(pathlosses, antennas, ues)
 
     write_to_file(antennas,ues,fichier_de_cas)
+    write_pathloss_to_file(pathlosses, fichier_de_cas)
+
     #
     #TODO les instructions de main qui vont faire appel aux autres fonctions du programme
     #.....
