@@ -17,6 +17,11 @@ import argparse
 # Numero propres a l'équipe
 numero_equipe = '7'
 numero_lab = '0'
+# (PROF) Est-ce que c'est du Hard-wired? Comment le faire a travers le fichier de cas? 
+coord_file_name = "lab"+numero_lab+"_eq"+numero_equipe+"_coords.txt"
+pathloss_file_name = "lab"+numero_lab+"_eq"+numero_equipe+"_pl.txt"
+assoc_ues_file_name = "lab"+numero_lab+"_eq"+numero_equipe+"_assoc_ue.txt"
+assoc_antennas_file_name = "lab"+numero_lab+"_eq"+numero_equipe+"_assoc_ant.txt"
 
 
 # Germe de toutes les fonctions aléatoires
