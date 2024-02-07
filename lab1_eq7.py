@@ -399,19 +399,120 @@ def lab1 (data_case):
     antennas = assigner_coordonnees_antennes(fichier_de_cas)
     return (antennas,ues)
 
-# def treat_cli_args(arg):
-#     # arg est une liste qui contient les arguments utilisés lors de l'appel du programme par CLI. 
-#     # Cette fonction doit retourner le nom du fichier de cas à partir de l'interface de commande (CLI)
-#     #... 
-#     # TODO
-#     #....
-#     # CETTE FONCTION EST OBLIGATOIRE
-#     # À noter que dans cette fonction il faut ajouter les vérifications qui s'imposent
-#     # par exemple, nombre d'arguments appropriés, existance du fichier de cas, etc.
-#     return case_file_name
+
+# Fonction vérifiant si le fichier YAML fournit en input a la bonne structure 
+def validate_yaml_structure(file_path):
+    try:
+        with open(file_path, 'r') as file:
+            yaml_content = yaml.load(file, Loader=yaml.FullLoader)
+    except yaml.YAMLError as e:
+        print(f"Error loading YAML file '{file_path}': {e}")
+        return False
+
+    # Define the expected structure
+    expected_structure = {
+        'ETUDE_PATHLOSS': {
+            'PATHLOSS': {
+                'model': None,
+                'scenario': None,
+            },
+            'ANT_COORD_GEN': None,
+            'UE_COORD_GEN': None,
+            'COORD_FILES': None,
+            'DEVICES': {
+                'Antenna1': {'number': None},
+                'UE1-App1': {'number': None},
+                'UE2-App2': {'number': None},
+            },
+            'GEOMETRY': {
+                'Surface': {
+                    'rectangle': {
+                        'length': None,
+                        'height': None
+                    }
+                }
+            }
+        }
+    }
+
+    # Validate the structure
+    if not validate_structure(yaml_content, expected_structure):
+        # Invalid structure in YAML file
+        return False
+
+    # Valid structure in YAML file
+    return True
+
+# Fonction comparant deux structures YAML et retournant False si différence existe
+def validate_structure(content, expected_structure):
+    if not isinstance(content, dict) or not isinstance(expected_structure, dict):
+        return False
+
+    for key, value in expected_structure.items():
+        if key not in content:
+            return False
+
+        if value is not None and not validate_structure(content[key], value):
+            return False
+
+    return True
+
+
+def treat_cli_args(arg):
+    # arg est une liste qui contient les arguments utilisés lors de l'appel du programme par CLI. 
+    # Cette fonction doit retourner le nom du fichier de cas à partir de l'interface de commande (CLI)
+    #... 
+    # TODO
+    #....
+    # CETTE FONCTION EST OBLIGATOIRE
+    # À noter que dans cette fonction il faut ajouter les vérifications qui s'imposent
+    # par exemple, nombre d'arguments appropriés, existance du fichier de cas, etc.
+    
+    case_file_name = arg[0]
+    print("Le nom du fichier de cas est : ",case_file_name)
+    # Check if the file exists
+    YAML_file_exists = True
+    YAML_file_correct_extension = True
+    correct_yaml_structure = True
+    if os.path.isfile(case_file_name):
+        # Check if the file has a YAML extension
+        _, file_extension = os.path.splitext(case_file_name)
+        if file_extension.lower() not in ['.yaml', '.yml']:
+            YAML_file_correct_extension = False
+        else:
+            # YAML has the correct extension
+            # Check if the YAML structure is good
+            file_path = case_file_name
+            if validate_yaml_structure(file_path):
+                correct_yaml_structure = True
+            else:
+                correct_yaml_structure = False
+    else:
+        YAML_file_exists = False
+    return YAML_file_exists, YAML_file_correct_extension, correct_yaml_structure, case_file_name
+
 
 def main(arg):
-    # case_file_name = treat_cli_args(arg)
+    # Verification de la validitee du fichier yaml fourni par la commande CLI
+    yaml_exist, yaml_correct_extenstion, correct_yaml_structure, case_file_name = treat_cli_args(arg)
+    print("YAML file name = ", case_file_name)
+    if (yaml_exist == False):
+        print("YAML file doesn't exist!")   
+        return 
+    else:
+        print("YAML file exists")
+    if yaml_correct_extenstion == False :
+        print(f"The YAML file does not have the correct extension.")
+        return
+    else:
+        print(f"The YAML file has the correct extension.")
+    if correct_yaml_structure == True:
+        print(f"The YAML file has the correct structure.")
+    else:
+        print(f"The YAML file does not have the correct structure.")
+        return
+
+    # Debut du programme :
     case_file_name = "lab1_eq7_cas.yaml"
     device_file_name = "device_db.yaml"
     data_case = read_yaml_file(case_file_name)
