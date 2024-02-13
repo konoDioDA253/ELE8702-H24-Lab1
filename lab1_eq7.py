@@ -242,14 +242,14 @@ def assigner_coordonnees_ues(fichier_de_cas):
 # fonction initialisant une liste de antennes et assignant des coordonnées selon la grille à chaque antenne
 def assigner_coordonnees_antennes(fichier_de_cas):
     liste_antennes_avec_coordonnees = []
-    terrain_shape =  fichier_de_cas['ETUDE_PATHLOSS']['GEOMETRY']['Surface']
+    terrain_shape =  get_from_dict('Surface',fichier_de_cas)
     id_counter = 0  # Tenir à jour un compteur pour chaque type d'antenne
 
-    devices = fichier_de_cas['ETUDE_PATHLOSS']['DEVICES']
+    devices = get_from_dict('DEVICES',fichier_de_cas)
     for antenna_group, antenna_info in devices.items():
         if antenna_group.startswith('Antenna'):
-            nombre_antennes = antenna_info['number']
-            type_de_generation = fichier_de_cas['ETUDE_PATHLOSS']['ANT_COORD_GEN']
+            nombre_antennes = get_from_dict('number', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_cas)), fichier_de_cas)))
+            type_de_generation = get_from_dict('ANT_COORD_GEN', fichier_de_cas)
             
             coords = gen_lattice_coords(terrain_shape, nombre_antennes)
             for id, coord in enumerate(coords, start=id_counter):
@@ -316,71 +316,69 @@ def get_group_and_coords_by_id(object_list, target_id):
 
 # Fonction permettant de calculer le pathloss entre une antenne et une UE
 # WARNING : VERIFIER TOUTES LES CONDITIONS DE LA FORMULE (i.e. km au lieu de metre dans le fichier de cas etc...)
+
 def okumura(fichier_de_cas, fichier_de_device, antenna_id, ue_id, antennas, ues):
-    #TODO ....
-    # C'est à vous décider le nombre et type d'arguments utilisés pour
-    #faire le calcul de pathloss avec le modèle d'Okumura-Hata
-    # CETTE FONCTION EST OBLIGATOIRE
-    model = fichier_de_cas['ETUDE_PATHLOSS']['PATHLOSS']['model']
-    scenario = fichier_de_cas['ETUDE_PATHLOSS']['PATHLOSS']['scenario']
+    model = get_from_dict('model', fichier_de_cas)
+    scenario = get_from_dict('scenario', fichier_de_cas)
+    # model = get_from_dict('model', fichier_de_cas['ETUDE_PATHLOSS']['PATHLOSS'])
+    # scenario = get_from_dict('scenario', fichier_de_cas['ETUDE_PATHLOSS']['PATHLOSS'])
+    
     if model == "okumura" and scenario == "urban_small":
-        # Model okumura scenario urbain petites villes
         antenna_group, antenna_coords = get_group_and_coords_by_id(antennas, antenna_id)
         ue_group, ue_coords = get_group_and_coords_by_id(ues, ue_id)
-        fc = fichier_de_device['ANTENNAS'][antenna_group]['frequency']
-        ht = fichier_de_device['ANTENNAS'][antenna_group]['height']
-        hr = fichier_de_device['UES'][ue_group]['height']
+        fc = get_from_dict('frequency', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
+        ht = get_from_dict('height', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
+        hr = get_from_dict('height', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
         distance = calculate_distance(antenna_coords, ue_coords)
-        # (PROF) est-ce que les chiffres dans les formules en dB doivent etre converti (exemple avec le 0.8 ici)?
-        A = (1.1*math.log10(fc) - 0.7)*hr - 1.56*math.log10(fc) - 0.8
-        pathloss = 69.55 + 26.16*math.log10(fc) - 13.82*math.log10(ht) - A + (44.9 - 6.55*math.log10(ht))*math.log10(distance)
+        
+        A = (1.1 * math.log10(fc) - 0.7) * hr - 1.56 * math.log10(fc) - 0.8
+        pathloss = 69.55 + 26.16 * math.log10(fc) - 13.82 * math.log10(ht) - A + (44.9 - 6.55 * math.log10(ht)) * math.log10(distance)
         return pathloss
+    
     if model == "okumura" and scenario == "urban_large":
-        # Model okumura scenario urbain grande villes
         antenna_group, antenna_coords = get_group_and_coords_by_id(antennas, antenna_id)
         ue_group, ue_coords = get_group_and_coords_by_id(ues, ue_id)
-        fc = fichier_de_device['ANTENNAS'][antenna_group]['frequency']
-        ht = fichier_de_device['ANTENNAS'][antenna_group]['height']
-        hr = fichier_de_device['UES'][ue_group]['height']
+        fc = get_from_dict('frequency', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
+        ht = get_from_dict('height', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
+        hr = get_from_dict('height', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
         distance = calculate_distance(antenna_coords, ue_coords)
-        # A = 
-        if fc < 0.3 :
-            # (PROF) Est-ce que le log est base 10 pour okumura?
-            # (PROF) est-ce que les chiffres dans les formules en dB doivent etre converti (exemple avec le 1.1 ici)?
-            A = 8.29*(math.log10(1.54*hr))**2 - 1.1
-        elif fc >= 0.3 :
-            A = 3.2*(math.log10(11.75*hr))**2 - 4.97
-        pathloss = 69.55 + 26.16*math.log10(fc) - 13.82*math.log10(ht) - A + (44.9 - 6.55*math.log10(ht))*math.log10(distance)
+        
+        if fc < 0.3:
+            A = 8.29 * (math.log10(1.54 * hr))**2 - 1.1
+        elif fc >= 0.3:
+            A = 3.2 * (math.log10(11.75 * hr))**2 - 4.97
+        
+        pathloss = 69.55 + 26.16 * math.log10(fc) - 13.82 * math.log10(ht) - A + (44.9 - 6.55 * math.log10(ht)) * math.log10(distance)
         return pathloss
+    
     if model == "okumura" and scenario == "suburban":
-        # Model okumura scenario suburbain
         antenna_group, antenna_coords = get_group_and_coords_by_id(antennas, antenna_id)
         ue_group, ue_coords = get_group_and_coords_by_id(ues, ue_id)
-        fc = fichier_de_device['ANTENNAS'][antenna_group]['frequency']
-        ht = fichier_de_device['ANTENNAS'][antenna_group]['height']
-        hr = fichier_de_device['UES'][ue_group]['height']
+        fc = get_from_dict('frequency', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
+        ht = get_from_dict('height',get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
+        hr = get_from_dict('height', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
         distance = calculate_distance(antenna_coords, ue_coords)
-        # (PROF) est-ce que les chiffres dans les formules en dB doivent etre converti (exemple avec le 0.8 ici)?
-        A = (1.1*math.log10(fc) - 0.7)*hr - 1.56*math.log10(fc) - 0.8
-        pathloss_urban_small = 69.55 + 26.16*math.log10(fc) - 13.82*math.log10(ht) - A + (44.9 - 6.55*math.log10(ht))*math.log10(distance)
-        pathloss = pathloss_urban_small - 2*(math.log10(fc/28))**2 - 5.4
+        
+        A = (1.1 * math.log10(fc) - 0.7) * hr - 1.56 * math.log10(fc) - 0.8
+        pathloss_urban_small = 69.55 + 26.16 * math.log10(fc) - 13.82 * math.log10(ht) - A + (44.9 - 6.55 * math.log10(ht)) * math.log10(distance)
+        pathloss = pathloss_urban_small - 2 * (math.log10(fc / 28))**2 - 5.4
         return pathloss
+    
     if model == "okumura" and scenario == "open":
-        # Model okumura scenario ouvert
         antenna_group, antenna_coords = get_group_and_coords_by_id(antennas, antenna_id)
         ue_group, ue_coords = get_group_and_coords_by_id(ues, ue_id)
-        fc = fichier_de_device['ANTENNAS'][antenna_group]['frequency']
-        ht = fichier_de_device['ANTENNAS'][antenna_group]['height']
-        hr = fichier_de_device['UES'][ue_group]['height']
+        fc = get_from_dict('frequency', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
+        ht = get_from_dict('height', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
+        hr = get_from_dict('height', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
         distance = calculate_distance(antenna_coords, ue_coords)
-        # (PROF) est-ce que les chiffres dans les formules en dB doivent etre converti (exemple avec le 0.8 ici)?
-        A = (1.1*math.log10(fc) - 0.7)*hr - 1.56*math.log10(fc) - 0.8
-        pathloss_urban_small = 69.55 + 26.16*math.log10(fc) - 13.82*math.log10(ht) - A + (44.9 - 6.55*math.log10(ht))*math.log10(distance)
-        pathloss = pathloss_urban_small - 4.78*(math.log10(fc))**2 -18.733*math.log10(fc) -40.98
-        return pathloss    
-    # Si aucun cas n'est selectionnee :
-    # FAIRE UN MESSAGE D'ERREUR CORRESPONDANT, GERER LA SITUATION
-    # (PROF) Que doit-on retourner si aucun cas de pathloss n'est trouve? retourner message
+        
+        A = (1.1 * math.log10(fc) - 0.7) * hr - 1.56 * math.log10(fc) - 0.8
+        pathloss_urban_small = 69.55 + 26.16 * math.log10(fc) - 13.82 * math.log10(ht) - A + (44.9 - 6.55 * math.log10(ht)) * math.log10(distance)
+        pathloss = pathloss_urban_small - 4.78 * (math.log10(fc))**2 - 18.733 * math.log10(fc) - 40.98
+        return pathloss
+
+    # Si aucun cas n'est sélectionné :
+    # FAIRE UN MESSAGE D'ERREUR CORRESPONDANT, GÉRER LA SITUATION
     return 0
 
 # **** ENVOYER EMAIL
