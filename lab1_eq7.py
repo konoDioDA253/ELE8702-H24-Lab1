@@ -16,6 +16,7 @@ import yaml
 import random
 import os
 import argparse
+import matplotlib.pyplot as plt
 
 # Variables GLOBAL
 # Numero propres a l'équipe
@@ -57,8 +58,6 @@ class UE:
         self.assoc_ant=None   # id de l'antenne associée à l'UE (int)
         self.los = True       # LoS ou non (bool)
         self.gen = None       # type de géneration de coordonnées: 'g', 'a', etc. (str)
-        # Attribut rajoutee par notre equipe
-        self.apptype = None # Pas besoin car tirer de la chaine de caractere de group
 
 # (PROF) : est-ce qu'on a le droit de rajouter une classe? oui ****
 class Pathloss:
@@ -148,6 +147,16 @@ def gen_lattice_coords(terrain_shape: dict, N: int):
         ERROR(''.join(msg), 2)
     return coords        
 
+# Fonction verifiant la présence d'un string dans un fichier YAML
+# Retourne True si le string est présent et False sinon
+def check_string_presence_in_yaml(string_to_check, yaml_data):
+    for device_type, devices in yaml_data.items():
+        for device_name, device_info in devices.items():
+            if string_to_check == device_name:
+                return True
+    return False
+
+# Fonction permettant de trouver la valeur d'une cle dans un fichier YAML
 def get_from_dict(key, data, res=None, curr_level = 1, min_level = 1):
     """Fonction qui retourne la valeur de n'importe quel clé du dictionnaire
        key: clé associé à la valeur recherchée
@@ -192,8 +201,8 @@ def read_yaml_file(fname):
 def gen_random_coords(fichier_de_cas):
     # Cette fonction doit générer les coordonées pour le cas de positionnement aléatoire
     # TODO PRESENTABLE
-    longueur_geometry = fichier_de_cas['ETUDE_PATHLOSS']['GEOMETRY']['Surface']['rectangle']['length']
-    hauteur_geometry = fichier_de_cas['ETUDE_PATHLOSS']['GEOMETRY']['Surface']['rectangle']['height']
+    longueur_geometry = get_from_dict('length', fichier_de_cas)
+    hauteur_geometry = get_from_dict('height', fichier_de_cas)
     
 
     x_aleatoire = random.uniform(1, longueur_geometry)
@@ -202,45 +211,39 @@ def gen_random_coords(fichier_de_cas):
     return coordonnees_aleatoires
 
 # Fonction initialisant une liste de ues et assignant des coordonnées aléatoirement à chaque ue dans la liste
-def assigner_coordonnees_ues(fichier_de_cas):
+def assigner_coordonnees_ues(fichier_de_cas, fichier_de_devices):
     liste_ues_avec_coordonnees = []
+    terrain_shape =  get_from_dict('Surface',fichier_de_cas)
+    id_counter = 0  # Tenir à jour un compteur pour chaque type d'antenne
 
-    # (PROF) : est-ce que ETUDE_PATHLOSS est considéré hard-wiring? BS
-    # OUI C'EST DU HARD_WIRING, UTILISER get_from_dict
-    nombre_ues_ue1 = fichier_de_cas['ETUDE_PATHLOSS']['DEVICES']['UE1-App1']['number']
-    nombre_ues_ue2 = fichier_de_cas['ETUDE_PATHLOSS']['DEVICES']['UE2-App2']['number']
-    type_de_generation = fichier_de_cas['ETUDE_PATHLOSS']['UE_COORD_GEN']
+    devices = get_from_dict('DEVICES',fichier_de_cas)
+    for ue_group,ue_info in devices.items():
+        if ue_group.startswith('UE'):
+            nombre_ues = get_from_dict('number', get_from_dict(ue_group, get_from_dict(next(iter(fichier_de_cas)), fichier_de_cas)))
+            type_de_generation = get_from_dict('UE_COORD_GEN', fichier_de_cas)
+            
+            start = id_counter
+            for i in range(nombre_ues):
+                id = start + i
+                # verifier existence du groupe de ue issu du fichier de cas dans fichier de devices
+                if check_string_presence_in_yaml(ue_group, fichier_de_devices) == False :
+                    ERROR(f"Le string {ue_group} introduit dans le fichier de cas n'est pas present dans le fichier de devices_db.yaml")
+                app_name = get_from_dict('app', get_from_dict(ue_group,fichier_de_devices))
+                ue = UE(id=id, app_name=app_name)
+                ue.coords = gen_random_coords(fichier_de_cas)
+                ue.gen = type_de_generation
+                ue.group = get_from_dict('name', get_from_dict(ue_group,fichier_de_devices))
 
-    # (PROF) : Doit-on pouvoir supporter plus que 2 types d'UE dans le fichier de cas?
-    # OUI UTILISER LA MEME CHOSE QUE ANTENNE
-    for i in range(nombre_ues_ue1):
-        ue = UE(id=len(liste_ues_avec_coordonnees), app_name='UE1-App1')
-        if (type_de_generation == 'a') :
-            coords = gen_random_coords(fichier_de_cas)
-        # (PROF) Est-ce que group=app est correct pour ue?
-        # NON UTILISER DEVICE_DB.YAML POUR GET LE appname ET LE group
-        ue.group = ue.app
-        ue.gen = type_de_generation
-        ue.coords = coords
-        ue.apptype = "app1"
-        liste_ues_avec_coordonnees.append(ue)
+                liste_ues_avec_coordonnees.append(ue)
 
-    for i in range(nombre_ues_ue2):
-        ue = UE(id=len(liste_ues_avec_coordonnees), app_name='UE2-App2')
-        if (type_de_generation == 'a') :
-            coords = gen_random_coords(fichier_de_cas)
-        # (PROF) Est-ce que group=app est correct pour ue?
-        # NON UTILISER DEVICE_DB.YAML POUR GET LE appname ET LE group
-        ue.group = ue.app
-        ue.gen = type_de_generation
-        ue.coords = coords
-        ue.apptype = "app2"
-        liste_ues_avec_coordonnees.append(ue)
+            # Mettre a jour le compteur pour ce type d'antenne
+            id_counter += nombre_ues
 
     return liste_ues_avec_coordonnees
 
+
 # fonction initialisant une liste de antennes et assignant des coordonnées selon la grille à chaque antenne
-def assigner_coordonnees_antennes(fichier_de_cas):
+def assigner_coordonnees_antennes(fichier_de_cas, fichier_de_devices):
     liste_antennes_avec_coordonnees = []
     terrain_shape =  get_from_dict('Surface',fichier_de_cas)
     id_counter = 0  # Tenir à jour un compteur pour chaque type d'antenne
@@ -253,10 +256,13 @@ def assigner_coordonnees_antennes(fichier_de_cas):
             
             coords = gen_lattice_coords(terrain_shape, nombre_antennes)
             for id, coord in enumerate(coords, start=id_counter):
+                # verifier existence du groupe de antenna issu du fichier de cas dans fichier de devices
+                if check_string_presence_in_yaml(antenna_group, fichier_de_devices) == False :
+                    ERROR(f"Le string {antenna_group} introduit dans le fichier de cas n'est pas present dans le fichier de devices_db.yaml")
                 antenna = Antenna(id)
                 antenna.coords = coord
                 antenna.gen = type_de_generation
-                antenna.group = antenna_group
+                antenna.group = get_from_dict('name', get_from_dict(antenna_group,fichier_de_devices))
                 liste_antennes_avec_coordonnees.append(antenna)
 
             # Mettre a jour le compteur pour ce type d'antenne
@@ -267,20 +273,23 @@ def assigner_coordonnees_antennes(fichier_de_cas):
 # Fonction qui ecrit les information par rapport aux coordonnees des antennes et au UEs
 def write_to_file(antennas, ues, fichier_de_cas):
 # (PROF) : Est-ce que mettre un tab et un retour a la ligne a la fin convient, ou il faut absolument des espace? NON C'EST CORRECT
-    with open(fichier_de_cas['ETUDE_PATHLOSS']['COORD_FILES']['write'], 'w') as file:
+    filename = get_from_dict('write', fichier_de_cas)
+    with open(filename, 'w') as file:
         for antenna in antennas:
             line = f"antenna\t{antenna.id}\t{antenna.group}\t{antenna.coords[0]}\t{antenna.coords[1]}\n"
             file.write(line)
 
         for ue in ues:
-            line = f"ue\t{ue.id}\t{ue.app}\t{ue.coords[0]}\t{ue.coords[1]}\t{ue.apptype}\n"
+            line = f"ue\t{ue.id}\t{ue.group}\t{ue.coords[0]}\t{ue.coords[1]}\t{ue.app}\n"
             file.write(line)
 
 # Fonction qui écrire dans un fichier la valeurs des pathlosses calculer, l'id de l'ue et des antennes associés et le senario utilisé et le model
 def write_pathloss_to_file(pathlosses, fichier_de_cas):
     with open(pathloss_file_name, 'w') as file:
         for pathloss in pathlosses:
-            line = f"{pathloss.id_ue}\t{pathloss.id_ant}\t{pathloss.value}\t{fichier_de_cas['ETUDE_PATHLOSS']['PATHLOSS']['model']}\t{fichier_de_cas['ETUDE_PATHLOSS']['PATHLOSS']['scenario']}\n"
+            model = get_from_dict('model', fichier_de_cas)
+            scenario = get_from_dict('scenario', fichier_de_cas)
+            line = f"{pathloss.id_ue}\t{pathloss.id_ant}\t{pathloss.value}\t{model}\t{scenario}\n"
             file.write(line)
 
 # Fonction qui ecrit dans un fichier l'id de l'antenne et tous les id des ues associees
@@ -434,8 +443,9 @@ def lab1 (data_case):
     # doivent avoir leur coordonées initialisées
     # CETTE FONCTION EST OBLIGATOIRE
     fichier_de_cas = data_case
-    ues = assigner_coordonnees_ues(fichier_de_cas)
-    antennas = assigner_coordonnees_antennes(fichier_de_cas)
+    fichier_de_devices = read_yaml_file("device_db.yaml")
+    ues = assigner_coordonnees_ues(fichier_de_cas, fichier_de_devices)
+    antennas = assigner_coordonnees_antennes(fichier_de_cas, fichier_de_devices)
     return (antennas,ues)
 
 
@@ -458,11 +468,7 @@ def validate_yaml_structure(file_path):
             'ANT_COORD_GEN': None,
             'UE_COORD_GEN': None,
             'COORD_FILES': None,
-            'DEVICES': {
-                'Antenna1': {'number': None},
-                'UE1-App1': {'number': None},
-                'UE2-App2': {'number': None},
-            },
+            'DEVICES': None,
             'GEOMETRY': {
                 'Surface': {
                     'rectangle': {
@@ -496,6 +502,33 @@ def validate_structure(content, expected_structure):
 
     return True
 
+# Fonction permettant d'afficher la disposition des equiepements Antennes et UEs
+def plot_equipment_positions(antennas, ues):
+    # Créer une nouvelle figure
+    plt.figure(figsize=(8, 6))
+    
+    # Tracer les positions des antennes
+    for antenna in antennas:
+        plt.plot(antenna.coords[0], antenna.coords[1], 'ro', label='_nolegend_')  # Ajouter '_nolegend_' pour ne pas afficher cette entrée dans la légende
+    plt.plot([], [], 'ro', label='Antennes')  # Entrée personnalisée pour les antennes dans la légende
+        
+    # Tracer les positions des UE
+    for ue in ues:
+        plt.plot(ue.coords[0], ue.coords[1], 'bo', label='_nolegend_')  # Ajouter '_nolegend_' pour ne pas afficher cette entrée dans la légende
+    plt.plot([], [], 'bo', label='UEs')  # Entrée personnalisée pour les UE dans la légende
+    
+    # Définir les labels et le titre du plot
+    plt.xlabel('Position X')
+    plt.ylabel('Position Y')
+    plt.title('Disposition des équipements')
+    
+    # Afficher la légende
+    plt.legend()
+    
+    # Sauvegarder le plot dans un fichier
+    plt.savefig('plot_disposition_equipement.png')
+    print("Veuillez trouver la position des equipements dans le fichier plot_disposition_equipement.png")
+    
 # Fonction permettant de traiter les arguments en entree de la commande CLI python pour lancer le code source
 def treat_cli_args(arg):
     # arg est une liste qui contient les arguments utilisés lors de l'appel du programme par CLI. 
@@ -567,6 +600,7 @@ def main(arg):
     write_pathloss_to_file(pathlosses, fichier_de_cas)
     write_assoc_ues_to_file(antennas, fichier_de_cas)
     write_assoc_ant_to_file(ues, fichier_de_cas)
+    plot_equipment_positions(antennas, ues)
 
 
 

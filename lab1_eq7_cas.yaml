@@ -20,9 +20,9 @@ ETUDE_PATHLOSS:
          number : 25
       Antenna2 : # Group Antenna1 (comme défini dans la base de données)
          number : 20
-      Antenna5 : # Group Antenna1 (comme défini dans la base de données)
-         number : 40
-      UE1-App1 : # Group UE1-App1 (comme défini dans la base de données)
+      # Antenna5 : # Group Antenna1 (comme défini dans la base de données)
+      #    number : 40
+      UE5-App5 : # Group UE1-App1 (comme défini dans la base de données)
          number : 30
       UE2-App2 : # Group UE2-App2 (comme défini dans la base de données)
          number: 20
