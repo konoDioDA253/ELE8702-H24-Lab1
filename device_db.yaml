@@ -17,7 +17,7 @@ ANTENNAS:
   Antenna2:
     type: antenna
     name: Antenna2
-    height: 40 #35
+    height: 35
     frequency:  0.9 #GHz
     gain:  45
 
@@ -67,4 +67,4 @@ UES:
     type: ue
     name: UE2-App2
     app: app2
-    height:  5 #1.5
+    height:  1.5
