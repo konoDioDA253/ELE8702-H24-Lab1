@@ -323,25 +323,61 @@ def get_group_and_coords_by_id(object_list, target_id):
             return object.group, object.coords
     return None  
 
-# Fonction permettant de calculer le pathloss entre une antenne et une UE
-# WARNING : VERIFIER TOUTES LES CONDITIONS DE LA FORMULE (i.e. km au lieu de metre dans le fichier de cas etc...)
+# Fonction permettant de verifier que les conditions d'application du model okumura sont respectes (sauf pour la distance UE-Antenne)
+def verify_okumura_conditions(fc,ht,hr, antenna_group, ue_group): 
+    if fc > 1.5 :
+        ERROR(f"""La fréquence {fc} GHz du groupe d'antenne '{antenna_group}' introduite dans le fichier de cas YAML est plus grande que 1.5 GHz. 
+Le model okumura ne s'applique pas. 
+Veuillez changer le groupe de l'antenne consideree dans le fichier YAML de cas ou modifier l'attribut 'frequency' du groupe {antenna_group} dans le fichier device_db.yaml""")
+    if fc < 0.15 :
+        ERROR(f"""La fréquence {fc} GHz du groupe d'antenne '{antenna_group}' introduite dans le fichier de cas YAML est plus petite que 0.15 GHz.
+Le model okumura ne s'applique pas. 
+Veuillez changer le groupe de l'antenne consideree dans le fichier YAML de cas ou modifier l'attribut 'frequency' du groupe {antenna_group} dans le fichier device_db.yaml""")
+    if ht > 300 :
+        ERROR(f"""La hauteur {ht} metres du groupe d'antenne '{antenna_group}' introduite dans le fichier de cas YAML est plus grande que 300 metres. 
+Le model okumura ne s'applique pas. 
+Veuillez changer le groupe de l'antenne consideree dans le fichier YAML de cas ou modifier l'attribut 'height' du groupe {antenna_group} dans le fichier device_db.yaml""")
+    if ht < 30 : 
+        ERROR(f"""La hauteur {ht} metres du groupe d'antenne '{antenna_group}' introduite dans le fichier de cas YAML est plus petite que 30 metres. 
+Le model okumura ne s'applique pas.
+Veuillez changer le groupe de l'antenne consideree dans le fichier YAML de cas ou modifier l'attribut 'height' du groupe {antenna_group} dans le fichier device_db.yaml""")
+    if hr > 10 :
+        ERROR(f"""La hauteur {ht} metres du groupe d'UE '{ue_group}' introduite dans le fichier de cas YAML est plus grande que 10 metres. 
+Le model okumura ne s'applique pas. 
+Veuillez changer le groupe de l'ue consideree dans le fichier YAML de cas ou modifier l'attribut 'height' du groupe {ue_group} dans le fichier device_db.yaml""")
+    if hr < 1 : 
+        ERROR(f"""La hauteur {ht} metres du groupe d'UE '{ue_group}' introduite dans le fichier de cas YAML est plus petite que 1 metres. 
+Le model okumura ne s'applique pas. 
+Veuillez changer le groupe de l'ue consideree dans le fichier YAML de cas ou modifier l'attribut 'height' du groupe {ue_group} dans le fichier device_db.yaml""")
+    return True
 
+# Fonction permettant de calculer le pathloss entre une antenne et une UE
 def okumura(fichier_de_cas, fichier_de_device, antenna_id, ue_id, antennas, ues):
     model = get_from_dict('model', fichier_de_cas)
     scenario = get_from_dict('scenario', fichier_de_cas)
-    # model = get_from_dict('model', fichier_de_cas['ETUDE_PATHLOSS']['PATHLOSS'])
-    # scenario = get_from_dict('scenario', fichier_de_cas['ETUDE_PATHLOSS']['PATHLOSS'])
     
     if model == "okumura" and scenario == "urban_small":
         antenna_group, antenna_coords = get_group_and_coords_by_id(antennas, antenna_id)
         ue_group, ue_coords = get_group_and_coords_by_id(ues, ue_id)
         fc = get_from_dict('frequency', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
         ht = get_from_dict('height', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
-        hr = get_from_dict('height', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
+        hr = get_from_dict('height', get_from_dict(ue_group,fichier_de_device))
+        verify_okumura_conditions(fc,ht,hr, antenna_group, ue_group)        
         distance = calculate_distance(antenna_coords, ue_coords)
         
         A = (1.1 * math.log10(fc) - 0.7) * hr - 1.56 * math.log10(fc) - 0.8
-        pathloss = 69.55 + 26.16 * math.log10(fc) - 13.82 * math.log10(ht) - A + (44.9 - 6.55 * math.log10(ht)) * math.log10(distance)
+            
+        if distance < 1 :
+            print(f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements""")
+            pathloss = 0
+        elif distance > 20 :
+            print(f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus grande que 20 km.
+Nous considerons un pathloss infini entre ces deux equipements""")            
+            pathloss = 1000000000000000000000000000000000000000000
+        else:
+            pathloss = 69.55 + 26.16 * math.log10(fc) - 13.82 * math.log10(ht) - A + (44.9 - 6.55 * math.log10(ht)) * math.log10(distance)
+        
         return pathloss
     
     if model == "okumura" and scenario == "urban_large":
@@ -349,7 +385,8 @@ def okumura(fichier_de_cas, fichier_de_device, antenna_id, ue_id, antennas, ues)
         ue_group, ue_coords = get_group_and_coords_by_id(ues, ue_id)
         fc = get_from_dict('frequency', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
         ht = get_from_dict('height', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
-        hr = get_from_dict('height', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
+        hr = get_from_dict('height', get_from_dict(ue_group,fichier_de_device))
+        verify_okumura_conditions(fc,ht,hr, antenna_group, ue_group)
         distance = calculate_distance(antenna_coords, ue_coords)
         
         if fc < 0.3:
@@ -357,7 +394,17 @@ def okumura(fichier_de_cas, fichier_de_device, antenna_id, ue_id, antennas, ues)
         elif fc >= 0.3:
             A = 3.2 * (math.log10(11.75 * hr))**2 - 4.97
         
-        pathloss = 69.55 + 26.16 * math.log10(fc) - 13.82 * math.log10(ht) - A + (44.9 - 6.55 * math.log10(ht)) * math.log10(distance)
+        if distance < 1 :
+            print(f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements""")
+            pathloss = 0
+        elif distance > 20 :
+            print(f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus grande que 20 km.
+Nous considerons un pathloss infini entre ces deux equipements""")            
+            pathloss = 1000000000000000000000000000000000000000000
+        else:       
+            pathloss = 69.55 + 26.16 * math.log10(fc) - 13.82 * math.log10(ht) - A + (44.9 - 6.55 * math.log10(ht)) * math.log10(distance)
+        
         return pathloss
     
     if model == "okumura" and scenario == "suburban":
@@ -365,12 +412,24 @@ def okumura(fichier_de_cas, fichier_de_device, antenna_id, ue_id, antennas, ues)
         ue_group, ue_coords = get_group_and_coords_by_id(ues, ue_id)
         fc = get_from_dict('frequency', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
         ht = get_from_dict('height',get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
-        hr = get_from_dict('height', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
+        hr = get_from_dict('height', get_from_dict(ue_group,fichier_de_device))
+        verify_okumura_conditions(fc,ht,hr, antenna_group, ue_group)
         distance = calculate_distance(antenna_coords, ue_coords)
         
         A = (1.1 * math.log10(fc) - 0.7) * hr - 1.56 * math.log10(fc) - 0.8
-        pathloss_urban_small = 69.55 + 26.16 * math.log10(fc) - 13.82 * math.log10(ht) - A + (44.9 - 6.55 * math.log10(ht)) * math.log10(distance)
-        pathloss = pathloss_urban_small - 2 * (math.log10(fc / 28))**2 - 5.4
+
+        if distance < 1 :
+            print(f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements""")
+            pathloss = 0
+        elif distance > 20 :
+            print(f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus grande que 20 km.
+Nous considerons un pathloss infini entre ces deux equipements""")            
+            pathloss = 1000000000000000000000000000000000000000000
+        else:
+            pathloss_urban_small = 69.55 + 26.16 * math.log10(fc) - 13.82 * math.log10(ht) - A + (44.9 - 6.55 * math.log10(ht)) * math.log10(distance)
+            pathloss = pathloss_urban_small - 2 * (math.log10(fc / 28))**2 - 5.4
+        
         return pathloss
     
     if model == "okumura" and scenario == "open":
@@ -378,16 +437,34 @@ def okumura(fichier_de_cas, fichier_de_device, antenna_id, ue_id, antennas, ues)
         ue_group, ue_coords = get_group_and_coords_by_id(ues, ue_id)
         fc = get_from_dict('frequency', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
         ht = get_from_dict('height', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
-        hr = get_from_dict('height', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
+        hr = get_from_dict('height', get_from_dict(ue_group,fichier_de_device))
+        verify_okumura_conditions(fc,ht,hr, antenna_group, ue_group)
         distance = calculate_distance(antenna_coords, ue_coords)
         
         A = (1.1 * math.log10(fc) - 0.7) * hr - 1.56 * math.log10(fc) - 0.8
-        pathloss_urban_small = 69.55 + 26.16 * math.log10(fc) - 13.82 * math.log10(ht) - A + (44.9 - 6.55 * math.log10(ht)) * math.log10(distance)
-        pathloss = pathloss_urban_small - 4.78 * (math.log10(fc))**2 - 18.733 * math.log10(fc) - 40.98
+        
+        if distance < 1 :
+            print(f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements""")
+            pathloss = 0
+        elif distance > 20 :
+            print(f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus grande que 20 km.
+Nous considerons un pathloss infini entre ces deux equipements""")            
+            pathloss = 1000000000000000000000000000000000000000000
+        else:
+            pathloss_urban_small = 69.55 + 26.16 * math.log10(fc) - 13.82 * math.log10(ht) - A + (44.9 - 6.55 * math.log10(ht)) * math.log10(distance)
+            pathloss = pathloss_urban_small - 4.78 * (math.log10(fc))**2 - 18.733 * math.log10(fc) - 40.98
+
         return pathloss
 
     # Si aucun cas n'est sélectionné :
-    # FAIRE UN MESSAGE D'ERREUR CORRESPONDANT, GÉRER LA SITUATION
+    # FAIRE UN MESSAGE D'ERREUR CORRESPONDANT
+    ERROR("""SVP, entrer un model et un scenario dans le fichier de cas YAML parmi les propositions suivantes (model,scenario) :
+           (model : okumura, scenario : urban_small)
+           (model : okumura, scenario : urban_large)
+           (model : okumura, scenario : suburban)
+           (model : okumura, scenario : open)
+          """)
     return 0
 
 # **** ENVOYER EMAIL
@@ -518,8 +595,8 @@ def plot_equipment_positions(antennas, ues):
     plt.plot([], [], 'bo', label='UEs')  # Entrée personnalisée pour les UE dans la légende
     
     # Définir les labels et le titre du plot
-    plt.xlabel('Position X')
-    plt.ylabel('Position Y')
+    plt.xlabel('Longueur (km)')
+    plt.ylabel('Largeur (km)')
     plt.title('Disposition des équipements')
     
     # Afficher la légende
@@ -527,7 +604,7 @@ def plot_equipment_positions(antennas, ues):
     
     # Sauvegarder le plot dans un fichier
     plt.savefig('plot_disposition_equipement.png')
-    print("Veuillez trouver la position des equipements dans le fichier plot_disposition_equipement.png")
+    print("Please find the position of the equipment in the file plot_disposition_equipement.png.")
     
 # Fonction permettant de traiter les arguments en entree de la commande CLI python pour lancer le code source
 def treat_cli_args(arg):
@@ -564,6 +641,14 @@ def treat_cli_args(arg):
         YAML_file_exists = False
     return YAML_file_exists, YAML_file_correct_extension, correct_yaml_structure, case_file_name
 
+# Fonction faisant un sanity check sur les dimensions du terrain et affiche un warning le cas échéant
+def sanity_check_dimensions(fichier_de_cas):
+    length = get_from_dict('length', fichier_de_cas)
+    height = get_from_dict('height', fichier_de_cas)
+    if length >= 100 or height >= 100 :
+        print("WARNING : one of the rectangle's dimensions are over 100 km!")
+        print("WARNING : Are you sure that the dimensions specified in the case file are in kilometers?")
+        print("Continuing anyway...")
 # Fonction main du programme (requise), elle appelle les autres fonctions du programme
 def main(arg):
     # Verification de la validitee du fichier yaml fourni par la commande CLI
@@ -589,7 +674,9 @@ def main(arg):
     device_file_name = "device_db.yaml"
     data_case = read_yaml_file(case_file_name)
     data_device = read_yaml_file(device_file_name)
+    
     fichier_de_cas = data_case
+    sanity_check_dimensions(fichier_de_cas)
     fichier_de_device = data_device
     antennas, ues = lab1(fichier_de_cas)
 
