@@ -1,15 +1,8 @@
-## Numéro d'équipe : 
+## Numéro d'équipe : 7
 ## Bouh Abdillahi (Matricule : 1940646)
 ## Vincent Yves Nodjom (Matricule : 1944011)
 ## Équipe : 7
 ## Github link : https://github.com/konoDioDA253/ELE8702-H24-Lab1
-## Question 1BS : À quoi sert l'attribut group de la classe ue, et quelle est la différence avec l'attribut app
-## Question 2BS : Est-ce correct d'utiliser group=app pour les ues? NON group=name de device_db et app=app de device_db
-## Question 3 : à quoi sert la fonction d'erreur? Il faut utiliser pour chaque warning
-## Question 4*BS : Notre  fichier de cas eat-il sensé supporter plus d'un model à la foi? NON
-## Question 5*BS : Est-ce qu'on peut comparer avec la prof les valeurs du pathlosses? ENVOYER UN SAMPLE PAR EMAIL à LA PROF
-## Question 6 : Verifier les aligenement dans le fichier d'affichage  est-ce qu'il faut des espaces ou pas BS?
-## Question 7 : toujours verifier la distance car on peut ne pas utiliser une liste de coordonnées au lieu de la fonction randon
 import sys
 import math
 import yaml
@@ -59,17 +52,13 @@ class UE:
         self.los = True       # LoS ou non (bool)
         self.gen = None       # type de géneration de coordonnées: 'g', 'a', etc. (str)
 
-# (PROF) : est-ce qu'on a le droit de rajouter une classe? oui ****
 class Pathloss:
      def __init__(self, id_ue, id_ant):
         self.id_ue = id_ue   # ID de l'ue
         self.id_ant = id_ant # ID de l'antenne
         self.value = None   # Valeur du pathloss
 
-
-# (PROF) : À quoi doit servir la fonction d'erreur?
-# FAIRE EN SORTE DE METTRE UN NOM DE FICHIER PAR DEFAUT POUR CLI YAML
-# S'ASSURER QUE LES STRING DANS LES YAML FONT DU SENS
+# Fonction permettant d'afficher un message d'erreur et de stopper le programme
 def ERROR(msg , code = 1):
     print("\n\n\nERROR\nPROGRAM STOPPED!!!\n")
     if msg:
@@ -77,7 +66,7 @@ def ERROR(msg , code = 1):
     print(f"\n\texit code = {code}\n\n\t\n")
     sys.exit(code)
 
-
+# Fonction permettant de creer une grille pour la generation des coordonnees d'antenne
 def fill_up_the_lattice(N, lh, lv, nh, nv):
     """Function appelée par get_rectangle_lattice_coords()"""
     
@@ -111,6 +100,7 @@ def fill_up_the_lattice(N, lh, lv, nh, nv):
         y = y +deltav
     return coords
 
+# Fonction utilisee dans la generation de coordonnees des antennes
 def get_rectangle_lattice_coords(lh, lv, N, Np, nh, nv):
     """Function appelee par gen_lattice_coords()"""
     
@@ -122,6 +112,7 @@ def get_rectangle_lattice_coords(lh, lv, N, Np, nh, nv):
         coords = fill_up_the_lattice(N, lh, lv, nh, nv)
     return coords
 
+# Fonction utilisee dans la generation de coordonnees des antennes
 def gen_lattice_coords(terrain_shape: dict, N: int):
     """Génère un ensemble de N coordonnées placées en grille 
        sur un terrain rectangulaire
@@ -178,6 +169,7 @@ def get_from_dict(key, data, res=None, curr_level = 1, min_level = 1):
                 res = get_from_dict(key, v, res, level, min_level)
     return res 
 
+# Fonction permettant de lire un fichier YAML 
 def read_yaml_file(fname):
     # Fonction utilisée pour lire les fichiers de type .yaml
     # fname: nom du fichier .yaml à lire
@@ -225,7 +217,7 @@ def assigner_coordonnees_ues(fichier_de_cas, fichier_de_devices):
             start = id_counter
             for i in range(nombre_ues):
                 id = start + i
-                # verifier existence du groupe de ue issu du fichier de cas dans fichier de devices
+                # Verifier existence du groupe de ue issu du fichier de cas dans fichier de devices
                 if check_string_presence_in_yaml(ue_group, fichier_de_devices) == False :
                     ERROR(f"Le string {ue_group} introduit dans le fichier de cas n'est pas present dans le fichier de devices_db.yaml")
                 app_name = get_from_dict('app', get_from_dict(ue_group,fichier_de_devices))
@@ -242,7 +234,7 @@ def assigner_coordonnees_ues(fichier_de_cas, fichier_de_devices):
     return liste_ues_avec_coordonnees
 
 
-# fonction initialisant une liste de antennes et assignant des coordonnées selon la grille à chaque antenne
+# Fonction initialisant une liste de antennes et assignant des coordonnées selon la grille à chaque antenne
 def assigner_coordonnees_antennes(fichier_de_cas, fichier_de_devices):
     liste_antennes_avec_coordonnees = []
     terrain_shape =  get_from_dict('Surface',fichier_de_cas)
@@ -256,7 +248,7 @@ def assigner_coordonnees_antennes(fichier_de_cas, fichier_de_devices):
             
             coords = gen_lattice_coords(terrain_shape, nombre_antennes)
             for id, coord in enumerate(coords, start=id_counter):
-                # verifier existence du groupe de antenna issu du fichier de cas dans fichier de devices
+                # Verifier existence du groupe de antenna issu du fichier de cas dans fichier de devices
                 if check_string_presence_in_yaml(antenna_group, fichier_de_devices) == False :
                     ERROR(f"Le string {antenna_group} introduit dans le fichier de cas n'est pas present dans le fichier de devices_db.yaml")
                 antenna = Antenna(id)
@@ -275,10 +267,9 @@ def write_to_file(filename, log_message):
     with open(filename, 'w') as file:
         file.write(log_message)
 
-# Fonction qui ecrit les information par rapport aux coordonnees des antennes et au UEs
-def write_coordinates_to_file(antennas, ues, fichier_de_cas):
-# (PROF) : Est-ce que mettre un tab et un retour a la ligne a la fin convient, ou il faut absolument des espace? NON C'EST CORRECT
-    filename = get_from_dict('write', fichier_de_cas)
+# Fonction qui ecrit les information par rapport aux coordonnees des antennes et au UEs dans le fichier de sortie specifiee
+def write_coordinates_to_file(antennas, ues):
+    filename = coord_file_name
     with open(filename, 'w') as file:
         for antenna in antennas:
             line = f"antenna\t{antenna.id}\t{antenna.group}\t{antenna.coords[0]}\t{antenna.coords[1]}\n"
@@ -298,7 +289,7 @@ def write_pathloss_to_file(pathlosses, fichier_de_cas):
             file.write(line)
 
 # Fonction qui ecrit dans un fichier l'id de l'antenne et tous les id des ues associees
-def write_assoc_ues_to_file(antennas, fichier_de_cas):
+def write_assoc_ues_to_file(antennas):
     with open(assoc_antennas_file_name, 'w') as file:
         for antenna in antennas:
             line = f"{antenna.id}"
@@ -308,14 +299,13 @@ def write_assoc_ues_to_file(antennas, fichier_de_cas):
             file.write(line)
 
 # Fonction qui ecrit dans un fichier l'id de l'ue avec l'antenne associee
-def write_assoc_ant_to_file(ues, fichier_de_cas):
+def write_assoc_ant_to_file(ues):
     with open(assoc_ues_file_name, 'w') as file:
         for ue in ues:
             line = f"{ue.id}\t{ue.assoc_ant}\n"
             file.write(line)
 
 # Fonction calculant la distance entre deux point sur le terrain
-# S'ASSURER DE LA PRESENCE DANS LE TERRAIN DES DEUX COORDONNEES
 def calculate_distance(coord1, coord2):
     x1, y1 = coord1
     x2, y2 = coord2
@@ -462,7 +452,7 @@ Nous considerons un pathloss valant INFINI entre ces deux equipements\n"""
 
         return pathloss, warning_message
 
-    # Si aucun cas n'est sélectionné :
+    # Si aucun cas n'est sélectionnee :
     # FAIRE UN MESSAGE D'ERREUR CORRESPONDANT
     ERROR("""SVP, entrer un model et un scenario dans le fichier de cas YAML parmi les propositions suivantes (model,scenario) :
            (model : okumura, scenario : urban_small)
@@ -472,7 +462,6 @@ Nous considerons un pathloss valant INFINI entre ces deux equipements\n"""
           """)
     return 0
 
-# **** ENVOYER EMAIL
 # Fonction permettant d'assigner un pathloss à chaque combinaison (antenne,UE) du terrain
 def pathloss_attribution(fichier_de_cas, fichier_de_device, antennas, ues):
     pathloss_list =[]
@@ -515,6 +504,7 @@ def association_ue_antenne(pathlosses, antennas, ues):
     return antennas, ues
 
 # Fonction lab1 requise, retourne une liste d'antenne et une liste d'UE
+# Prends en parametre data_case qui est le nom du fichier de cas
 def lab1 (data_case):
     #TODO ....
     # antennas est une liste qui contient les objets de type Antenna
@@ -587,7 +577,7 @@ def validate_structure(content, expected_structure):
 
     return True
 
-# Fonction permettant d'afficher la disposition des equiepements Antennes et UEs
+# Fonction permettant d'afficher la disposition des equiepements Antennes et UEs sur un plot
 def plot_equipment_positions(antennas, ues):
     # Créer une nouvelle figure
     plt.figure(figsize=(8, 6))
@@ -649,7 +639,7 @@ def treat_cli_args(arg):
         YAML_file_exists = False
     return YAML_file_exists, YAML_file_correct_extension, correct_yaml_structure, case_file_name
 
-# Fonction faisant un sanity check sur les dimensions du terrain et affiche un warning le cas échéant
+# Fonction faisant un sanity check (verification) sur les dimensions du terrain et affiche un warning le cas échéant
 def sanity_check_dimensions(fichier_de_cas):
     length = get_from_dict('length', fichier_de_cas)
     height = get_from_dict('height', fichier_de_cas)
@@ -658,7 +648,7 @@ def sanity_check_dimensions(fichier_de_cas):
         print("WARNING : Are you sure that the dimensions specified in the case file are in kilometers?")
         print("Continuing anyway...")
 
-# Fonction vérifiant si le programme doit fournir un fichier log des warnings 
+# Fonction vérifiant si le programme doit fournir un fichier log des warnings du calcul des pathloss
 # Si des warning concernant le calcul des pathloss sont apparus, ils se retrouvent dans ce fichier
 def write_pathloss_warning_log_file(warning_log, filename):
     if warning_log == "":
@@ -702,11 +692,13 @@ def main(arg):
 
     pathlosses, warning_log = pathloss_attribution(fichier_de_cas,fichier_de_device,antennas,ues)
     antennas, ues = association_ue_antenne(pathlosses, antennas, ues)
+
+    # Ecriture des fichiers de sortie et du plot des equipements
     write_pathloss_warning_log_file(warning_log, "pathloss_warning_log.txt")
-    write_coordinates_to_file(antennas,ues,fichier_de_cas)
+    write_coordinates_to_file(antennas,ues)
     write_pathloss_to_file(pathlosses, fichier_de_cas)
-    write_assoc_ues_to_file(antennas, fichier_de_cas)
-    write_assoc_ant_to_file(ues, fichier_de_cas)
+    write_assoc_ues_to_file(antennas)
+    write_assoc_ant_to_file(ues)
     plot_equipment_positions(antennas, ues)
 
 
