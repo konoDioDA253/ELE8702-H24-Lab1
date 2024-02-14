@@ -615,9 +615,8 @@ def treat_cli_args(arg):
     # À noter que dans cette fonction il faut ajouter les vérifications qui s'imposent
     # par exemple, nombre d'arguments appropriés, existance du fichier de cas, etc.
     
-    case_file_name = "lab1_eq7_cas.yaml"
-    # case_file_name = arg[0]
-    print("Le nom du fichier de cas est : ",case_file_name)
+    # case_file_name = "lab1_eq7_cas.yaml"
+    case_file_name = arg[0]
     # Check if the file exists
     YAML_file_exists = True
     YAML_file_correct_extension = True
@@ -663,21 +662,21 @@ def write_pathloss_warning_log_file(warning_log, filename):
 def main(arg):
     # Verification de la validitee du fichier yaml fourni par la commande CLI
     yaml_exist, yaml_correct_extenstion, correct_yaml_structure, case_file_name = treat_cli_args(arg)
-    print("YAML file name = ", case_file_name)
+    print("YAML case file name = ", case_file_name)
     if (yaml_exist == False):
-        print("YAML file doesn't exist!")   
+        print("YAML case file doesn't exist!")   
         return 
     else:
-        print("YAML file exists")
+        print("YAML case file exists")
     if yaml_correct_extenstion == False :
-        print(f"The YAML file does not have the correct extension.")
+        print(f"The YAML case file does not have the correct extension.")
         return
     else:
-        print(f"The YAML file has the correct extension.")
+        print(f"The YAML case file has the correct extension.")
     if correct_yaml_structure == True:
-        print(f"The YAML file has the correct structure.")
+        print(f"The YAML case file has the correct structure.")
     else:
-        print(f"The YAML file does not have the correct structure.")
+        print(f"The YAML case file does not have the correct structure.")
         return
 
     # Debut du programme :
