@@ -266,6 +266,8 @@ def assigner_coordonnees_antennes(fichier_de_cas, fichier_de_devices):
 def write_to_file(filename, log_message):
     with open(filename, 'w') as file:
         file.write(log_message)
+    print(f"INFO : Wrote file '{filename}' in the current directory.")
+
 
 # Fonction qui ecrit les information par rapport aux coordonnees des antennes et au UEs dans le fichier de sortie specifiee
 def write_coordinates_to_file(antennas, ues):
@@ -278,32 +280,41 @@ def write_coordinates_to_file(antennas, ues):
         for ue in ues:
             line = f"ue\t{ue.id}\t{ue.group}\t{ue.coords[0]}\t{ue.coords[1]}\t{ue.app}\n"
             file.write(line)
+    print(f"INFO : Wrote file '{filename}' in the current directory.")
+
 
 # Fonction qui écrire dans un fichier la valeurs des pathlosses calculer, l'id de l'ue et des antennes associés et le senario utilisé et le model
 def write_pathloss_to_file(pathlosses, fichier_de_cas):
-    with open(pathloss_file_name, 'w') as file:
+    filename = pathloss_file_name
+    with open(filename, 'w') as file:
         for pathloss in pathlosses:
             model = get_from_dict('model', fichier_de_cas)
             scenario = get_from_dict('scenario', fichier_de_cas)
             line = f"{pathloss.id_ue}\t{pathloss.id_ant}\t{pathloss.value}\t{model}\t{scenario}\n"
             file.write(line)
+    print(f"INFO : Wrote file '{filename}' in the current directory.")
 
 # Fonction qui ecrit dans un fichier l'id de l'antenne et tous les id des ues associees
 def write_assoc_ues_to_file(antennas):
-    with open(assoc_antennas_file_name, 'w') as file:
+    filename = assoc_antennas_file_name
+    with open(filename, 'w') as file:
         for antenna in antennas:
             line = f"{antenna.id}"
             for ue in antenna.assoc_ues :
                 line += f"\t{ue}"
             line += "\n"
             file.write(line)
+    print(f"INFO : Wrote file '{filename}' in the current directory.")
+
 
 # Fonction qui ecrit dans un fichier l'id de l'ue avec l'antenne associee
 def write_assoc_ant_to_file(ues):
-    with open(assoc_ues_file_name, 'w') as file:
+    filename = assoc_ues_file_name
+    with open(filename, 'w') as file:
         for ue in ues:
             line = f"{ue.id}\t{ue.assoc_ant}\n"
             file.write(line)
+    print(f"INFO : Wrote file '{filename}' in the current directory.")
 
 # Fonction calculant la distance entre deux point sur le terrain
 def calculate_distance(coord1, coord2):
@@ -360,7 +371,7 @@ def okumura(fichier_de_cas, fichier_de_device, antenna_id, ue_id, antennas, ues)
         verify_okumura_conditions(fc,ht,hr, antenna_group, ue_group)        
         distance = calculate_distance(antenna_coords, ue_coords)
         
-        A = (1.1 * math.log10(fc) - 0.7) * hr - 1.56 * math.log10(fc) - 0.8
+        A = (1.1 * math.log10(fc) - 0.7) * hr - 1.56 * math.log10(fc) + 0.8
             
         if distance < 1 :
             warning_message = f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus petite que 1 km.
@@ -411,7 +422,7 @@ Nous considerons un pathloss valant INFINI entre ces deux equipements\n"""
         verify_okumura_conditions(fc,ht,hr, antenna_group, ue_group)
         distance = calculate_distance(antenna_coords, ue_coords)
         
-        A = (1.1 * math.log10(fc) - 0.7) * hr - 1.56 * math.log10(fc) - 0.8
+        A = (1.1 * math.log10(fc) - 0.7) * hr - 1.56 * math.log10(fc) + 0.8
 
         if distance < 1 :
             warning_message = f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus petite que 1 km.
@@ -436,7 +447,7 @@ Nous considerons un pathloss valant INFINI entre ces deux equipements\n"""
         verify_okumura_conditions(fc,ht,hr, antenna_group, ue_group)
         distance = calculate_distance(antenna_coords, ue_coords)
         
-        A = (1.1 * math.log10(fc) - 0.7) * hr - 1.56 * math.log10(fc) - 0.8
+        A = (1.1 * math.log10(fc) - 0.7) * hr - 1.56 * math.log10(fc) + 0.8
         
         if distance < 1 :
             warning_message = f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus petite que 1 km.
@@ -601,8 +612,10 @@ def plot_equipment_positions(antennas, ues):
     plt.legend()
     
     # Sauvegarder le plot dans un fichier
-    plt.savefig('plot_disposition_equipement.png')
-    print("Please find the position of the equipment in the file plot_disposition_equipement.png.")
+    filename = 'plot_disposition_equipement.png'
+    plt.savefig(filename)
+    print(f"INFO : Wrote file '{filename}' in the current directory.")
+    print(f"INFO : Please find a visualization of the layout of UEs and antennas on the field in the file '{filename}'.")
     
 # Fonction permettant de traiter les arguments en entree de la commande CLI python pour lancer le code source
 def treat_cli_args(arg):
@@ -653,8 +666,8 @@ def write_pathloss_warning_log_file(warning_log, filename):
     if warning_log == "":
         print("Aucun problem lors du calcul des pathloss!")
     else:
-        print(f"WARNING : During the pathloss calculation, some pathloss values had distances that did not meet the conditions of the Okumura model. Please find the details in the attached file. Please find the details in the file '{filename}' (located in your current directory).")
         write_to_file(filename, warning_log)
+        print(f"WARNING : During the pathloss calculation, some pathloss values had distances that did not meet the conditions of the Okumura model. Please find more details in the file '{filename}'.")
 
 
 
@@ -693,12 +706,12 @@ def main(arg):
     antennas, ues = association_ue_antenne(pathlosses, antennas, ues)
 
     # Ecriture des fichiers de sortie et du plot des equipements
-    write_pathloss_warning_log_file(warning_log, "pathloss_warning_log.txt")
     write_coordinates_to_file(antennas,ues)
     write_pathloss_to_file(pathlosses, fichier_de_cas)
     write_assoc_ues_to_file(antennas)
     write_assoc_ant_to_file(ues)
     plot_equipment_positions(antennas, ues)
+    write_pathloss_warning_log_file(warning_log, "pathloss_warning_log.txt")
 
 
 

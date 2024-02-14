@@ -9,7 +9,7 @@
 ETUDE_PATHLOSS:
    PATHLOSS :
       model : okumura
-      scenario : urban_large
+      scenario : open
    ANT_COORD_GEN : g
    UE_COORD_GEN: a
    COORD_FILES:  # Utilisé quand les coordonées sont lues à partir d'un fichier.
