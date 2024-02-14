@@ -17,13 +17,13 @@ ETUDE_PATHLOSS:
       write: sortie.txt  # actif quand on veut écrire les résultats dans un fichier
    DEVICES:
       Antenna2 : # Group Antenna2 (comme défini dans la base de données)
-         number : 20
+         number : 25
       UE1-App1 : # Group UE1-App1 (comme défini dans la base de données)
-         number : 30
+         number : 100
       UE2-App2 : # Group UE2-App2 (comme défini dans la base de données)
-         number: 20
+         number: 200
    GEOMETRY:
       Surface:
          rectangle:
-           length : 50 # en kilomètres
-           height : 40
+           length : 25 # en kilomètres
+           height : 20

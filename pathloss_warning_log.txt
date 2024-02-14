@@ -1,716 +1,46 @@
-WARNING : la distance entre l'UE 0 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 0 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 0 et l'antenne 6 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 0 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 0 et l'antenne 9 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 0 et l'antenne 10 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 0 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 0 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 0 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 0 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 0 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 0 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 0 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 0 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
 WARNING : la distance entre l'UE 0 et l'antenne 19 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 1 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 1 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 1 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 1 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 1 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 1 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 1 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 1 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 1 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 1 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 2 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 2 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 2 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 2 et l'antenne 5 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 2 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 2 et l'antenne 9 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 2 et l'antenne 10 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 2 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 2 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 2 et l'antenne 14 est plus grande que 20 km.
+WARNING : la distance entre l'UE 0 et l'antenne 24 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
 WARNING : la distance entre l'UE 2 et l'antenne 15 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 2 et l'antenne 16 est plus grande que 20 km.
+WARNING : la distance entre l'UE 2 et l'antenne 20 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 2 et l'antenne 17 est plus grande que 20 km.
+WARNING : la distance entre l'UE 4 et l'antenne 20 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 2 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 2 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 3 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 3 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 3 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 3 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 4 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 4 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 4 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 4 et l'antenne 5 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 4 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 4 et l'antenne 9 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 4 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 4 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 4 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 4 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 4 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 4 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 4 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 5 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 5 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 5 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 5 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 5 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 5 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 5 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 6 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 6 et l'antenne 6 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 6 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 6 et l'antenne 9 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 6 et l'antenne 10 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 6 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 6 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 6 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 6 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 6 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 6 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 6 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 6 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 6 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 7 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 7 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 7 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 7 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 7 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 7 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 7 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 7 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 7 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 8 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 8 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 8 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 8 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 8 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 8 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 8 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 8 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 8 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 8 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 8 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 9 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 9 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 9 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 9 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 9 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 9 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 10 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 10 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 10 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 10 et l'antenne 5 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 10 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 10 et l'antenne 9 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 10 et l'antenne 10 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 10 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 10 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 10 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 9 et l'antenne 11 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
 WARNING : la distance entre l'UE 10 et l'antenne 15 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 10 et l'antenne 16 est plus grande que 20 km.
+WARNING : la distance entre l'UE 10 et l'antenne 20 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 10 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 10 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 10 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 11 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 11 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 11 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 11 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 11 et l'antenne 5 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 11 et l'antenne 6 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 11 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 11 et l'antenne 10 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 11 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 11 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 11 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 11 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 11 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 12 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 12 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 12 et l'antenne 2 est plus grande que 20 km.
+WARNING : la distance entre l'UE 11 et l'antenne 4 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
 WARNING : la distance entre l'UE 12 et l'antenne 3 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
 WARNING : la distance entre l'UE 12 et l'antenne 4 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 12 et l'antenne 5 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 12 et l'antenne 6 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 12 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
 WARNING : la distance entre l'UE 12 et l'antenne 9 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 12 et l'antenne 10 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 12 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 12 et l'antenne 13 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
 WARNING : la distance entre l'UE 12 et l'antenne 14 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 12 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 12 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
 WARNING : la distance entre l'UE 12 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 13 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 13 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 13 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 13 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 13 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 13 et l'antenne 19 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
 WARNING : la distance entre l'UE 14 et l'antenne 0 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 14 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 14 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 14 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 14 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 14 et l'antenne 5 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 14 et l'antenne 6 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 14 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 14 et l'antenne 9 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 14 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 14 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 14 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 14 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 15 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 15 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 15 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 15 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 15 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 15 et l'antenne 6 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 15 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 15 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 15 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 15 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 16 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 16 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 16 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 16 et l'antenne 6 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 16 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 16 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 16 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 16 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 16 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 17 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 17 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 17 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 17 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 17 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 17 et l'antenne 5 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 17 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 17 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 18 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 18 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 18 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 18 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 18 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 18 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 19 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 19 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 19 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 19 et l'antenne 5 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 19 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 19 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 19 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 19 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 20 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 20 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 20 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 20 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 20 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 20 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 21 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 21 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 21 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 21 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 21 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 21 et l'antenne 5 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 21 et l'antenne 6 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 21 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 21 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 21 et l'antenne 9 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 21 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 21 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 22 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 22 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 22 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 22 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 22 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 22 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 23 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 23 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 23 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 23 et l'antenne 10 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 23 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 23 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 23 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 23 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 23 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 23 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 23 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 23 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 23 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 24 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 24 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 24 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 24 et l'antenne 9 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 24 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 24 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 24 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 24 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 24 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 24 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 24 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 18 et l'antenne 11 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 22 et l'antenne 22 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
 WARNING : la distance entre l'UE 25 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 25 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 25 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 25 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 25 et l'antenne 4 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
 WARNING : la distance entre l'UE 25 et l'antenne 5 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 25 et l'antenne 6 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 25 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 25 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 25 et l'antenne 9 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 25 et l'antenne 10 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 25 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 25 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 25 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 25 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 26 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 26 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 26 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 26 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 26 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 26 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 26 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 26 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 26 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 26 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 27 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 27 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 27 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 27 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 27 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 27 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 28 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 28 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 28 et l'antenne 6 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 28 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 28 et l'antenne 10 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 28 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 28 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 28 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 28 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 28 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 28 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 29 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 29 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 29 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 29 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 29 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 30 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 30 et l'antenne 6 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 30 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 30 et l'antenne 10 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 30 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 30 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 30 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 30 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 30 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 30 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 30 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 30 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 30 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 31 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 31 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 31 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 31 et l'antenne 9 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 31 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 31 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 31 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 31 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 31 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 31 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 31 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 31 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 31 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 32 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 32 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 32 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 32 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 32 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 32 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 32 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 32 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 32 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 33 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 33 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 33 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 33 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 33 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 33 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 27 et l'antenne 11 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
 WARNING : la distance entre l'UE 34 et l'antenne 0 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 34 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 34 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 34 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 34 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
 WARNING : la distance entre l'UE 34 et l'antenne 5 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 34 et l'antenne 6 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 34 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 34 et l'antenne 9 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 34 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 34 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 34 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 34 et l'antenne 17 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
 WARNING : la distance entre l'UE 35 et l'antenne 0 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
@@ -718,517 +48,555 @@ WARNING : la distance entre l'UE 35 et l'antenne 1 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
 WARNING : la distance entre l'UE 35 et l'antenne 2 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 35 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 35 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
 WARNING : la distance entre l'UE 35 et l'antenne 5 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
 WARNING : la distance entre l'UE 35 et l'antenne 6 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 35 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 35 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 35 et l'antenne 9 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
 WARNING : la distance entre l'UE 35 et l'antenne 10 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 35 et l'antenne 11 est plus grande que 20 km.
+WARNING : la distance entre l'UE 35 et l'antenne 15 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 35 et l'antenne 12 est plus grande que 20 km.
+WARNING : la distance entre l'UE 35 et l'antenne 20 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 35 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 35 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 35 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 35 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 35 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 36 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 36 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 36 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 36 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 36 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 36 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 36 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 36 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 36 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 37 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 37 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 37 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 37 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 37 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 37 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 36 et l'antenne 8 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
 WARNING : la distance entre l'UE 38 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 38 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 38 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 38 et l'antenne 4 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
 WARNING : la distance entre l'UE 38 et l'antenne 5 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 38 et l'antenne 6 est plus grande que 20 km.
+WARNING : la distance entre l'UE 38 et l'antenne 10 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 38 et l'antenne 8 est plus grande que 20 km.
+WARNING : la distance entre l'UE 38 et l'antenne 15 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 38 et l'antenne 9 est plus grande que 20 km.
+WARNING : la distance entre l'UE 38 et l'antenne 20 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 38 et l'antenne 12 est plus grande que 20 km.
+WARNING : la distance entre l'UE 46 et l'antenne 4 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 38 et l'antenne 13 est plus grande que 20 km.
+WARNING : la distance entre l'UE 46 et l'antenne 9 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 38 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 38 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 38 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 38 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 39 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 39 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 39 et l'antenne 5 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 39 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 39 et l'antenne 9 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 39 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 39 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 39 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 39 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 39 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 39 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 39 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 39 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 40 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 40 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 40 et l'antenne 6 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 40 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 40 et l'antenne 10 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 40 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 40 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 40 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 40 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 40 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 40 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 40 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 40 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 41 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 41 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 41 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 41 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 41 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 41 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 41 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 42 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 42 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 42 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 42 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 42 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 42 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 43 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 43 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 43 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 43 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 43 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 43 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 43 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 43 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 43 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 43 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 44 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 44 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 44 et l'antenne 6 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 44 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 44 et l'antenne 10 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 44 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 44 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 44 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 44 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 44 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 44 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 45 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 45 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 45 et l'antenne 6 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 45 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 45 et l'antenne 10 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 45 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 45 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 45 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 45 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 45 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 45 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 46 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 46 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 46 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 46 et l'antenne 5 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 46 et l'antenne 6 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 46 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 46 et l'antenne 10 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 46 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 46 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 46 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 46 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 46 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 46 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 47 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 47 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 47 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 47 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 47 et l'antenne 5 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 47 et l'antenne 6 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 47 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 47 et l'antenne 10 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 47 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 47 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 47 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 47 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 47 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 48 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 48 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 48 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 48 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 48 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 48 et l'antenne 5 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 48 et l'antenne 6 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 48 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 48 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 48 et l'antenne 10 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 48 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 48 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 48 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 49 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 49 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 49 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 49 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 49 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 49 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 49 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 50 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 50 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 50 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 50 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 50 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 50 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 50 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 50 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 51 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 51 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 51 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 51 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 51 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 51 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 51 et l'antenne 19 est plus grande que 20 km.
+WARNING : la distance entre l'UE 47 et l'antenne 4 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
 WARNING : la distance entre l'UE 52 et l'antenne 0 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
 WARNING : la distance entre l'UE 52 et l'antenne 1 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 52 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 52 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 52 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
 WARNING : la distance entre l'UE 52 et l'antenne 5 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 52 et l'antenne 6 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 52 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 52 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 52 et l'antenne 9 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
 WARNING : la distance entre l'UE 52 et l'antenne 10 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 52 et l'antenne 12 est plus grande que 20 km.
+WARNING : la distance entre l'UE 52 et l'antenne 15 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 52 et l'antenne 13 est plus grande que 20 km.
+WARNING : la distance entre l'UE 52 et l'antenne 20 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 52 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 52 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 52 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 53 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 53 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 53 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 53 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 53 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 53 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 54 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 54 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 54 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 54 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 54 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 54 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 55 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 55 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 55 et l'antenne 10 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 55 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 55 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 55 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 55 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 55 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 55 et l'antenne 16 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 55 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 55 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 55 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 56 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 56 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 56 et l'antenne 4 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 56 et l'antenne 5 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 56 et l'antenne 8 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 56 et l'antenne 9 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 56 et l'antenne 10 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 56 et l'antenne 12 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 56 et l'antenne 13 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 56 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 54 et l'antenne 13 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
 WARNING : la distance entre l'UE 56 et l'antenne 15 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 56 et l'antenne 16 est plus grande que 20 km.
+WARNING : la distance entre l'UE 56 et l'antenne 20 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 56 et l'antenne 17 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 56 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 56 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 57 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 57 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 58 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 58 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 58 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 58 et l'antenne 6 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 58 et l'antenne 7 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 58 et l'antenne 10 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 58 et l'antenne 11 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 58 et l'antenne 14 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 58 et l'antenne 15 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 58 et l'antenne 18 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 58 et l'antenne 19 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 57 et l'antenne 17 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 58 et l'antenne 20 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
 WARNING : la distance entre l'UE 59 et l'antenne 0 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 59 et l'antenne 1 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 59 et l'antenne 2 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 59 et l'antenne 3 est plus grande que 20 km.
-Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 59 et l'antenne 4 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
 WARNING : la distance entre l'UE 59 et l'antenne 5 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 59 et l'antenne 6 est plus grande que 20 km.
+WARNING : la distance entre l'UE 59 et l'antenne 10 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 59 et l'antenne 8 est plus grande que 20 km.
+WARNING : la distance entre l'UE 61 et l'antenne 0 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 59 et l'antenne 9 est plus grande que 20 km.
+WARNING : la distance entre l'UE 61 et l'antenne 5 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 59 et l'antenne 12 est plus grande que 20 km.
+WARNING : la distance entre l'UE 61 et l'antenne 10 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 59 et l'antenne 13 est plus grande que 20 km.
+WARNING : la distance entre l'UE 61 et l'antenne 15 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 59 et l'antenne 16 est plus grande que 20 km.
+WARNING : la distance entre l'UE 61 et l'antenne 20 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements
-WARNING : la distance entre l'UE 59 et l'antenne 17 est plus grande que 20 km.
+WARNING : la distance entre l'UE 64 et l'antenne 20 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 66 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 66 et l'antenne 5 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 68 et l'antenne 20 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 71 et l'antenne 17 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 73 et l'antenne 6 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 75 et l'antenne 11 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 76 et l'antenne 10 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 76 et l'antenne 15 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 76 et l'antenne 20 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 78 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 78 et l'antenne 1 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 78 et l'antenne 5 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 78 et l'antenne 6 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 78 et l'antenne 10 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 78 et l'antenne 15 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 78 et l'antenne 20 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 81 et l'antenne 16 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 82 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 82 et l'antenne 1 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 82 et l'antenne 5 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 82 et l'antenne 10 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 84 et l'antenne 22 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 86 et l'antenne 19 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 87 et l'antenne 12 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 90 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 90 et l'antenne 5 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 93 et l'antenne 3 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 93 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 93 et l'antenne 9 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 93 et l'antenne 14 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 97 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 98 et l'antenne 3 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 98 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 98 et l'antenne 9 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 103 et l'antenne 5 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 105 et l'antenne 10 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 105 et l'antenne 15 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 105 et l'antenne 20 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 112 et l'antenne 20 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 113 et l'antenne 10 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 113 et l'antenne 15 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 113 et l'antenne 20 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 114 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 114 et l'antenne 9 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 116 et l'antenne 2 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 116 et l'antenne 3 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 116 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 116 et l'antenne 8 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 116 et l'antenne 9 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 116 et l'antenne 14 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 116 et l'antenne 19 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 117 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 117 et l'antenne 9 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 118 et l'antenne 20 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 120 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 120 et l'antenne 1 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 120 et l'antenne 5 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 120 et l'antenne 10 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 123 et l'antenne 11 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 128 et l'antenne 24 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 130 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 130 et l'antenne 1 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 130 et l'antenne 5 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 130 et l'antenne 10 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 132 et l'antenne 7 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 135 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 135 et l'antenne 9 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 136 et l'antenne 3 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 136 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 136 et l'antenne 9 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 136 et l'antenne 14 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 138 et l'antenne 15 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 143 et l'antenne 15 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 143 et l'antenne 20 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 144 et l'antenne 10 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 144 et l'antenne 15 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 144 et l'antenne 20 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 145 et l'antenne 18 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 146 et l'antenne 3 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 146 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 146 et l'antenne 9 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 146 et l'antenne 14 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 146 et l'antenne 19 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 147 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 154 et l'antenne 13 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 156 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 156 et l'antenne 5 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 156 et l'antenne 10 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 156 et l'antenne 15 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 156 et l'antenne 20 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 157 et l'antenne 19 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 157 et l'antenne 24 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 158 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 160 et l'antenne 19 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 161 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 161 et l'antenne 9 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 162 et l'antenne 6 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 163 et l'antenne 10 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 163 et l'antenne 15 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 163 et l'antenne 20 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 164 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 166 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 167 et l'antenne 10 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 167 et l'antenne 15 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 167 et l'antenne 20 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 169 et l'antenne 15 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 169 et l'antenne 20 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 170 et l'antenne 4 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 171 et l'antenne 19 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 171 et l'antenne 24 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 173 et l'antenne 3 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 175 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 177 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 179 et l'antenne 3 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 180 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 180 et l'antenne 19 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 180 et l'antenne 24 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 182 et l'antenne 4 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 182 et l'antenne 20 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 183 et l'antenne 3 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 183 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 183 et l'antenne 9 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 183 et l'antenne 14 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 184 et l'antenne 1 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 185 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 187 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 187 et l'antenne 5 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 189 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 189 et l'antenne 5 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 189 et l'antenne 10 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 189 et l'antenne 15 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 189 et l'antenne 20 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 191 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 193 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 193 et l'antenne 19 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 193 et l'antenne 24 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 195 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 195 et l'antenne 9 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 199 et l'antenne 3 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 202 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 202 et l'antenne 1 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 202 et l'antenne 5 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 202 et l'antenne 10 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 203 et l'antenne 24 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 205 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 205 et l'antenne 5 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 207 et l'antenne 3 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 207 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 207 et l'antenne 9 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 207 et l'antenne 14 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 209 et l'antenne 15 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 209 et l'antenne 20 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 210 et l'antenne 24 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 211 et l'antenne 10 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 212 et l'antenne 18 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 217 et l'antenne 13 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 219 et l'antenne 0 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 219 et l'antenne 24 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 220 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 221 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 221 et l'antenne 5 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 223 et l'antenne 4 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 224 et l'antenne 14 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 224 et l'antenne 19 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 224 et l'antenne 24 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 225 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 225 et l'antenne 5 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 225 et l'antenne 10 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 226 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 226 et l'antenne 9 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 228 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 229 et l'antenne 4 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 229 et l'antenne 20 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 230 et l'antenne 3 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 230 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 230 et l'antenne 9 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 230 et l'antenne 14 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 232 et l'antenne 18 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 236 et l'antenne 5 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 237 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 237 et l'antenne 5 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 237 et l'antenne 15 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 237 et l'antenne 20 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 238 et l'antenne 12 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 239 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 239 et l'antenne 5 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 240 et l'antenne 20 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 242 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 244 et l'antenne 14 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 246 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 246 et l'antenne 1 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 246 et l'antenne 5 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 246 et l'antenne 10 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 246 et l'antenne 15 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 247 et l'antenne 19 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 247 et l'antenne 24 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 249 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 249 et l'antenne 9 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 251 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 251 et l'antenne 20 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 252 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 253 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 255 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 256 et l'antenne 3 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 257 et l'antenne 19 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 257 et l'antenne 24 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 258 et l'antenne 4 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 263 et l'antenne 18 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 264 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 264 et l'antenne 1 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 264 et l'antenne 5 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 264 et l'antenne 6 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 264 et l'antenne 10 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 264 et l'antenne 15 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 264 et l'antenne 20 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 265 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 266 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 267 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 267 et l'antenne 5 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 270 et l'antenne 12 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 272 et l'antenne 8 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 277 et l'antenne 12 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 279 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 280 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 281 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 281 et l'antenne 5 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 281 et l'antenne 10 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 281 et l'antenne 15 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 281 et l'antenne 20 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 283 et l'antenne 17 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 286 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 286 et l'antenne 5 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 288 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 288 et l'antenne 5 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 291 et l'antenne 0 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 291 et l'antenne 24 est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements
+WARNING : la distance entre l'UE 293 et l'antenne 15 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 293 et l'antenne 20 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 297 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 298 et l'antenne 3 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 298 et l'antenne 4 est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements
+WARNING : la distance entre l'UE 298 et l'antenne 9 est plus grande que 20 km.
 Nous considerons un pathloss valant INFINI entre ces deux equipements

@@ -320,12 +320,12 @@ def get_group_and_coords_by_id(object_list, target_id):
 
 # Fonction permettant de verifier que les conditions d'application du model okumura sont respectes (sauf pour la distance UE-Antenne)
 def verify_okumura_conditions(fc,ht,hr, antenna_group, ue_group): 
-    if fc > 1.5 :
-        ERROR(f"""La fréquence {fc} GHz du groupe d'antenne '{antenna_group}' introduite dans le fichier de cas YAML est plus grande que 1.5 GHz. 
+    if fc > 1500 :
+        ERROR(f"""La fréquence {fc} MHz du groupe d'antenne '{antenna_group}' introduite dans le fichier de cas YAML est plus grande que 1.5 GHz. 
 Le model okumura ne s'applique pas. 
 Veuillez changer le groupe de l'antenne consideree dans le fichier YAML de cas ou modifier l'attribut 'frequency' du groupe {antenna_group} dans le fichier device_db.yaml""")
-    if fc < 0.15 :
-        ERROR(f"""La fréquence {fc} GHz du groupe d'antenne '{antenna_group}' introduite dans le fichier de cas YAML est plus petite que 0.15 GHz.
+    if fc < 150 :
+        ERROR(f"""La fréquence {fc} MHz du groupe d'antenne '{antenna_group}' introduite dans le fichier de cas YAML est plus petite que 0.15 GHz.
 Le model okumura ne s'applique pas. 
 Veuillez changer le groupe de l'antenne consideree dans le fichier YAML de cas ou modifier l'attribut 'frequency' du groupe {antenna_group} dans le fichier device_db.yaml""")
     if ht > 300 :
@@ -354,7 +354,7 @@ def okumura(fichier_de_cas, fichier_de_device, antenna_id, ue_id, antennas, ues)
     if model == "okumura" and scenario == "urban_small":
         antenna_group, antenna_coords = get_group_and_coords_by_id(antennas, antenna_id)
         ue_group, ue_coords = get_group_and_coords_by_id(ues, ue_id)
-        fc = get_from_dict('frequency', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
+        fc = 1000*get_from_dict('frequency', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
         ht = get_from_dict('height', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
         hr = get_from_dict('height', get_from_dict(ue_group,fichier_de_device))
         verify_okumura_conditions(fc,ht,hr, antenna_group, ue_group)        
@@ -378,15 +378,15 @@ Nous considerons un pathloss valant INFINI entre ces deux equipements\n"""
     if model == "okumura" and scenario == "urban_large":
         antenna_group, antenna_coords = get_group_and_coords_by_id(antennas, antenna_id)
         ue_group, ue_coords = get_group_and_coords_by_id(ues, ue_id)
-        fc = get_from_dict('frequency', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
+        fc = 1000*get_from_dict('frequency', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
         ht = get_from_dict('height', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
         hr = get_from_dict('height', get_from_dict(ue_group,fichier_de_device))
         verify_okumura_conditions(fc,ht,hr, antenna_group, ue_group)
         distance = calculate_distance(antenna_coords, ue_coords)
         
-        if fc < 0.3:
+        if fc < 300:
             A = 8.29 * (math.log10(1.54 * hr))**2 - 1.1
-        elif fc >= 0.3:
+        elif fc >= 300:
             A = 3.2 * (math.log10(11.75 * hr))**2 - 4.97
         
         if distance < 1 :
@@ -405,7 +405,7 @@ Nous considerons un pathloss valant INFINI entre ces deux equipements\n"""
     if model == "okumura" and scenario == "suburban":
         antenna_group, antenna_coords = get_group_and_coords_by_id(antennas, antenna_id)
         ue_group, ue_coords = get_group_and_coords_by_id(ues, ue_id)
-        fc = get_from_dict('frequency', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
+        fc = 1000*get_from_dict('frequency', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
         ht = get_from_dict('height',get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
         hr = get_from_dict('height', get_from_dict(ue_group,fichier_de_device))
         verify_okumura_conditions(fc,ht,hr, antenna_group, ue_group)
@@ -430,7 +430,7 @@ Nous considerons un pathloss valant INFINI entre ces deux equipements\n"""
     if model == "okumura" and scenario == "open":
         antenna_group, antenna_coords = get_group_and_coords_by_id(antennas, antenna_id)
         ue_group, ue_coords = get_group_and_coords_by_id(ues, ue_id)
-        fc = get_from_dict('frequency', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
+        fc = 1000*get_from_dict('frequency', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
         ht = get_from_dict('height', get_from_dict(antenna_group, get_from_dict(next(iter(fichier_de_device)), fichier_de_device)))
         hr = get_from_dict('height', get_from_dict(ue_group,fichier_de_device))
         verify_okumura_conditions(fc,ht,hr, antenna_group, ue_group)
@@ -448,7 +448,7 @@ Nous considerons un pathloss valant INFINI entre ces deux equipements\n"""
             pathloss = 1000000000000000000000000000000000000000000
         else:
             pathloss_urban_small = 69.55 + 26.16 * math.log10(fc) - 13.82 * math.log10(ht) - A + (44.9 - 6.55 * math.log10(ht)) * math.log10(distance)
-            pathloss = pathloss_urban_small - 4.78 * (math.log10(fc))**2 - 18.733 * math.log10(fc) - 40.98
+            pathloss = pathloss_urban_small - 4.78 * (math.log10(fc))**2 + 18.33 * math.log10(fc) - 40.94
 
         return pathloss, warning_message
 
