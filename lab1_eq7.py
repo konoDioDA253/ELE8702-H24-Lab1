@@ -270,8 +270,13 @@ def assigner_coordonnees_antennes(fichier_de_cas, fichier_de_devices):
 
     return liste_antennes_avec_coordonnees
 
+# Fonction ecrivant un log_message dans un nouveau fichier 
+def write_to_file(filename, log_message):
+    with open(filename, 'w') as file:
+        file.write(log_message)
+
 # Fonction qui ecrit les information par rapport aux coordonnees des antennes et au UEs
-def write_to_file(antennas, ues, fichier_de_cas):
+def write_coordinates_to_file(antennas, ues, fichier_de_cas):
 # (PROF) : Est-ce que mettre un tab et un retour a la ligne a la fin convient, ou il faut absolument des espace? NON C'EST CORRECT
     filename = get_from_dict('write', fichier_de_cas)
     with open(filename, 'w') as file:
@@ -355,7 +360,7 @@ Veuillez changer le groupe de l'ue consideree dans le fichier YAML de cas ou mod
 def okumura(fichier_de_cas, fichier_de_device, antenna_id, ue_id, antennas, ues):
     model = get_from_dict('model', fichier_de_cas)
     scenario = get_from_dict('scenario', fichier_de_cas)
-    
+    warning_message = ""
     if model == "okumura" and scenario == "urban_small":
         antenna_group, antenna_coords = get_group_and_coords_by_id(antennas, antenna_id)
         ue_group, ue_coords = get_group_and_coords_by_id(ues, ue_id)
@@ -368,17 +373,17 @@ def okumura(fichier_de_cas, fichier_de_device, antenna_id, ue_id, antennas, ues)
         A = (1.1 * math.log10(fc) - 0.7) * hr - 1.56 * math.log10(fc) - 0.8
             
         if distance < 1 :
-            print(f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus petite que 1 km.
-Nous considerons un pathloss valant 0 entre ces deux equipements""")
+            warning_message = f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements\n"""
             pathloss = 0
         elif distance > 20 :
-            print(f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus grande que 20 km.
-Nous considerons un pathloss infini entre ces deux equipements""")            
+            warning_message = f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements\n"""            
             pathloss = 1000000000000000000000000000000000000000000
         else:
             pathloss = 69.55 + 26.16 * math.log10(fc) - 13.82 * math.log10(ht) - A + (44.9 - 6.55 * math.log10(ht)) * math.log10(distance)
         
-        return pathloss
+        return pathloss, warning_message
     
     if model == "okumura" and scenario == "urban_large":
         antenna_group, antenna_coords = get_group_and_coords_by_id(antennas, antenna_id)
@@ -395,17 +400,17 @@ Nous considerons un pathloss infini entre ces deux equipements""")
             A = 3.2 * (math.log10(11.75 * hr))**2 - 4.97
         
         if distance < 1 :
-            print(f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus petite que 1 km.
-Nous considerons un pathloss valant 0 entre ces deux equipements""")
+            warning_message = f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements\n"""
             pathloss = 0
         elif distance > 20 :
-            print(f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus grande que 20 km.
-Nous considerons un pathloss infini entre ces deux equipements""")            
+            warning_message = f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements\n"""            
             pathloss = 1000000000000000000000000000000000000000000
         else:       
             pathloss = 69.55 + 26.16 * math.log10(fc) - 13.82 * math.log10(ht) - A + (44.9 - 6.55 * math.log10(ht)) * math.log10(distance)
         
-        return pathloss
+        return pathloss, warning_message
     
     if model == "okumura" and scenario == "suburban":
         antenna_group, antenna_coords = get_group_and_coords_by_id(antennas, antenna_id)
@@ -419,18 +424,18 @@ Nous considerons un pathloss infini entre ces deux equipements""")
         A = (1.1 * math.log10(fc) - 0.7) * hr - 1.56 * math.log10(fc) - 0.8
 
         if distance < 1 :
-            print(f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus petite que 1 km.
-Nous considerons un pathloss valant 0 entre ces deux equipements""")
+            warning_message = f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements\n"""
             pathloss = 0
         elif distance > 20 :
-            print(f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus grande que 20 km.
-Nous considerons un pathloss infini entre ces deux equipements""")            
+            warning_message = f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements\n"""            
             pathloss = 1000000000000000000000000000000000000000000
         else:
             pathloss_urban_small = 69.55 + 26.16 * math.log10(fc) - 13.82 * math.log10(ht) - A + (44.9 - 6.55 * math.log10(ht)) * math.log10(distance)
             pathloss = pathloss_urban_small - 2 * (math.log10(fc / 28))**2 - 5.4
         
-        return pathloss
+        return pathloss, warning_message
     
     if model == "okumura" and scenario == "open":
         antenna_group, antenna_coords = get_group_and_coords_by_id(antennas, antenna_id)
@@ -444,18 +449,18 @@ Nous considerons un pathloss infini entre ces deux equipements""")
         A = (1.1 * math.log10(fc) - 0.7) * hr - 1.56 * math.log10(fc) - 0.8
         
         if distance < 1 :
-            print(f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus petite que 1 km.
-Nous considerons un pathloss valant 0 entre ces deux equipements""")
+            warning_message = f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus petite que 1 km.
+Nous considerons un pathloss valant 0 entre ces deux equipements\n"""
             pathloss = 0
         elif distance > 20 :
-            print(f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus grande que 20 km.
-Nous considerons un pathloss infini entre ces deux equipements""")            
+            warning_message = f"""WARNING : la distance entre l'UE {ue_id} et l'antenne {antenna_id} est plus grande que 20 km.
+Nous considerons un pathloss valant INFINI entre ces deux equipements\n"""            
             pathloss = 1000000000000000000000000000000000000000000
         else:
             pathloss_urban_small = 69.55 + 26.16 * math.log10(fc) - 13.82 * math.log10(ht) - A + (44.9 - 6.55 * math.log10(ht)) * math.log10(distance)
             pathloss = pathloss_urban_small - 4.78 * (math.log10(fc))**2 - 18.733 * math.log10(fc) - 40.98
 
-        return pathloss
+        return pathloss, warning_message
 
     # Si aucun cas n'est sélectionné :
     # FAIRE UN MESSAGE D'ERREUR CORRESPONDANT
@@ -471,12 +476,15 @@ Nous considerons un pathloss infini entre ces deux equipements""")
 # Fonction permettant d'assigner un pathloss à chaque combinaison (antenne,UE) du terrain
 def pathloss_attribution(fichier_de_cas, fichier_de_device, antennas, ues):
     pathloss_list =[]
+    warning_log = ""
     for ue in ues:
         for antenna in antennas:
             pathloss = Pathloss(ue.id, antenna.id)
-            pathloss.value = okumura(fichier_de_cas, fichier_de_device, antenna.id, ue.id, antennas, ues)
+            pathloss_value, warning_message = okumura(fichier_de_cas, fichier_de_device, antenna.id, ue.id, antennas, ues)
+            pathloss.value = pathloss_value
+            warning_log += warning_message
             pathloss_list.append(pathloss)
-    return pathloss_list
+    return pathloss_list, warning_log
 
 # Fonction permettant d'associer les UEs du terrain a leur antenne ayant le pathloss minimal
 def association_ue_antenne(pathlosses, antennas, ues):
@@ -649,6 +657,18 @@ def sanity_check_dimensions(fichier_de_cas):
         print("WARNING : one of the rectangle's dimensions are over 100 km!")
         print("WARNING : Are you sure that the dimensions specified in the case file are in kilometers?")
         print("Continuing anyway...")
+
+# Fonction vérifiant si le programme doit fournir un fichier log des warnings 
+# Si des warning concernant le calcul des pathloss sont apparus, ils se retrouvent dans ce fichier
+def write_pathloss_warning_log_file(warning_log, filename):
+    if warning_log == "":
+        print("Aucun problem lors du calcul des pathloss!")
+    else:
+        print(f"WARNING : During the pathloss calculation, some pathloss values had distances that did not meet the conditions of the Okumura model. Please find the details in the attached file. Please find the details in the file '{filename}' (located in your current directory).")
+        write_to_file(filename, warning_log)
+
+
+
 # Fonction main du programme (requise), elle appelle les autres fonctions du programme
 def main(arg):
     # Verification de la validitee du fichier yaml fourni par la commande CLI
@@ -680,10 +700,10 @@ def main(arg):
     fichier_de_device = data_device
     antennas, ues = lab1(fichier_de_cas)
 
-    pathlosses = pathloss_attribution(fichier_de_cas,fichier_de_device,antennas,ues)
+    pathlosses, warning_log = pathloss_attribution(fichier_de_cas,fichier_de_device,antennas,ues)
     antennas, ues = association_ue_antenne(pathlosses, antennas, ues)
-
-    write_to_file(antennas,ues,fichier_de_cas)
+    write_pathloss_warning_log_file(warning_log, "pathloss_warning_log.txt")
+    write_coordinates_to_file(antennas,ues,fichier_de_cas)
     write_pathloss_to_file(pathlosses, fichier_de_cas)
     write_assoc_ues_to_file(antennas, fichier_de_cas)
     write_assoc_ant_to_file(ues, fichier_de_cas)
